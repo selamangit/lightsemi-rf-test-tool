@@ -1,0 +1,4 @@
+D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release-mingw/CMakeFiles/lightsemi.dir
+D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release-mingw/CMakeFiles/edit_cache.dir
+D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release-mingw/CMakeFiles/rebuild_cache.dir
+D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release-mingw/CMakeFiles/lightsemi_autogen.dir
