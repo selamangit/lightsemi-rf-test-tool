@@ -9,6 +9,7 @@ CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QList \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QObject \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QStringList \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QTimer \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QVariant \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qabstractitemmodel.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qalgorithms.h \
@@ -18,6 +19,7 @@ CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qatomic_cxx11.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qatomic_msvc.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasicatomic.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasictimer.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbytearray.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbytearraylist.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qchar.h \
@@ -80,6 +82,7 @@ CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qsystemdetection.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtcore-config.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtextstream.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtimer.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtypeinfo.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qurl.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qurlquery.h \
@@ -133,6 +136,7 @@ CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QGridLayout \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QLabel \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QMainWindow \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QMessageBox \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QPushButton \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QSpacerItem \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QTabWidget \
@@ -149,12 +153,14 @@ CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qboxlayout.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qcombobox.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qdialog.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qframe.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qgridlayout.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qlabel.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qlayout.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qlayoutitem.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmainwindow.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmessagebox.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qrubberband.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qsizepolicy.h \
@@ -175,6 +181,7 @@ CMakeFiles/lightsemi.dir/main.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QList \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QObject \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QStringList \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QTimer \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QVariant \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qabstractitemmodel.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qalgorithms.h \
@@ -184,6 +191,7 @@ CMakeFiles/lightsemi.dir/main.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qatomic_cxx11.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qatomic_msvc.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasicatomic.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasictimer.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbytearray.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbytearraylist.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qchar.h \
@@ -246,6 +254,7 @@ CMakeFiles/lightsemi.dir/main.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qsystemdetection.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtcore-config.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtextstream.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtimer.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtypeinfo.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qurl.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qurlquery.h \
@@ -299,6 +308,7 @@ CMakeFiles/lightsemi.dir/main.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QGridLayout \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QLabel \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QMainWindow \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QMessageBox \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QPushButton \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QSpacerItem \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QTabWidget \
@@ -315,12 +325,14 @@ CMakeFiles/lightsemi.dir/main.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qboxlayout.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qcombobox.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qdialog.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qframe.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qgridlayout.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qlabel.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qlayout.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qlayoutitem.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmainwindow.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmessagebox.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qrubberband.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qsizepolicy.h \

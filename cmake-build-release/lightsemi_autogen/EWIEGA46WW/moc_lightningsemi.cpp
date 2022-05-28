@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Ui_MainWindow_t {
-    QByteArrayData data[5];
-    char stringdata0[75];
+    QByteArrayData data[6];
+    char stringdata0[105];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,11 +36,13 @@ QT_MOC_LITERAL(0, 0, 13), // "Ui_MainWindow"
 QT_MOC_LITERAL(1, 14, 33), // "on_comboBox_5_currentIndexCha..."
 QT_MOC_LITERAL(2, 48, 0), // ""
 QT_MOC_LITERAL(3, 49, 1), // "i"
-QT_MOC_LITERAL(4, 51, 23) // "on_pushButton_4_clicked"
+QT_MOC_LITERAL(4, 51, 23), // "on_pushButton_4_clicked"
+QT_MOC_LITERAL(5, 75, 29) // "on_timer_timerout_readComData"
 
     },
     "Ui_MainWindow\0on_comboBox_5_currentIndexChanged\0"
-    "\0i\0on_pushButton_4_clicked"
+    "\0i\0on_pushButton_4_clicked\0"
+    "on_timer_timerout_readComData"
 };
 #undef QT_MOC_LITERAL
 
@@ -50,7 +52,7 @@ static const uint qt_meta_data_Ui_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -58,11 +60,13 @@ static const uint qt_meta_data_Ui_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x0a /* Public */,
-       4,    0,   27,    2, 0x0a /* Public */,
+       1,    1,   29,    2, 0x0a /* Public */,
+       4,    0,   32,    2, 0x0a /* Public */,
+       5,    0,   33,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    3,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -76,6 +80,7 @@ void Ui_MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         switch (_id) {
         case 0: _t->on_comboBox_5_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->on_pushButton_4_clicked(); break;
+        case 2: _t->on_timer_timerout_readComData(); break;
         default: ;
         }
     }
@@ -110,13 +115,13 @@ int Ui_MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }

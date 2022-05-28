@@ -61,6 +61,10 @@ QtSerialPort/QSerialPort
 -
 QtSerialPort/QSerialPortInfo
 -
+QTimer
+-
+QMessageBox
+-
 
 D:/Project/QtProject/lightsemi-rf-test-tool/main.cpp
 QApplication
@@ -83,6 +87,10 @@ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qobject.h
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QStringList
 qstringlist.h
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qstringlist.h
+
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QTimer
+qtimer.h
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtimer.h
 
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QVariant
 qvariant.h
@@ -138,6 +146,12 @@ QtCore/qatomic_bootstrap.h
 QtCore/qatomic_cxx11.h
 -
 QtCore/qatomic_msvc.h
+-
+
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasictimer.h
+QtCore/qglobal.h
+-
+QtCore/qnamespace.h
 -
 
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbytearray.h
@@ -736,6 +750,16 @@ QtCore/qscopedpointer.h
 stdio.h
 -
 
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtimer.h
+QtCore/qglobal.h
+-
+QtCore/qbasictimer.h
+-
+QtCore/qobject.h
+-
+chrono
+-
+
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtypeinfo.h
 QtCore/qglobal.h
 -
@@ -1304,6 +1328,10 @@ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QMainWindow
 qmainwindow.h
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmainwindow.h
 
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QMessageBox
+qmessagebox.h
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmessagebox.h
+
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QPushButton
 qpushbutton.h
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h
@@ -1418,6 +1446,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qdialog.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qframe.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1476,6 +1510,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 QtWidgets/qtabwidget.h
+-
+
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmessagebox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qdialog.h
 -
 
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h
