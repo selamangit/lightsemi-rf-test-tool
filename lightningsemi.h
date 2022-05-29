@@ -23,6 +23,7 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include <QTimer>
 #include <QMessageBox>
+#include <QByteArray>
 
 
 QT_BEGIN_NAMESPACE
@@ -69,15 +70,26 @@ public slots:
             serial->clear();
             serial->close();
         }
-        foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
+//        foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
+//        {
+//            if(info.portName() == comboBox->currentText())
+//            {
+//                serial->setPort(info);
+//            }
+//        }
+        serial->setPortName(comboBox->currentText());
+        if(serial->open(QIODevice::ReadWrite))
         {
-            if(info.portName() == comboBox->currentText())
-            {
-                serial->setPort(info);
-            }
+            QObject::connect(timer, SIGNAL(timeout()),this, SLOT(on_timer_timerout_readComData()));
+            timer->start(1000);
         }
-//        serial->setPortName(comboBox->currentText());
-
+        else
+        {
+            QMessageBox::about(NULL, "提示", "串口没有打开！");
+            serial->clear();
+            serial->close();
+            return;
+        }
         switch (comboBox_2->currentText().toInt())
         {
             case 1200:
@@ -109,20 +121,19 @@ public slots:
         serial->setParity(QSerialPort::NoParity);
         serial->setFlowControl(QSerialPort::NoFlowControl);
         serial->setStopBits(QSerialPort::OneStop);
-        if(serial->open(QIODevice::ReadWrite))
-        {
-            QObject::connect(timer, SIGNAL(timeout()),this, SLOT(on_timer_timerout_readComData()));
-            timer->start(1000);
-        }
-        else
-        {
-            QMessageBox::about(NULL, "提示", "串口没有打开！");
-            return;
-        }
     }
     void on_timer_timerout_readComData()
     {
-        printf("123");
+        QByteArray info = serial->readAll();
+        if(!info.isEmpty())
+        {
+            auto text = textBrowser->toPlainText();
+            text.append(info.data());
+            textBrowser->setText(text);
+            qDebug()<<"receive info:"<<info;
+            qDebug()<<"receive info:"<<info.data();
+            qDebug()<<"receive info:"<<info.count();
+        }
     }
 public:
     QStringList QList;
@@ -204,7 +215,6 @@ public:
     QTextBrowser *textBrowser;
     QSerialPort *serial;
     QTimer *timer;
-
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -593,7 +603,6 @@ public:
         QMetaObject::connectSlotsByName(MainWindow);
         initPort(MainWindow);
     } // setupUi
-
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));

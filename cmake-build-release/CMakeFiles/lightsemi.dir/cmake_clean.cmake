@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj"
   "CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/lightsemi.dir/main.cpp.obj"
   "CMakeFiles/lightsemi_autogen.dir/AutogenUsed.txt"

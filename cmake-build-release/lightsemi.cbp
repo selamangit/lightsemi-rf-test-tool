@@ -119,6 +119,9 @@
 		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen/mocs_compilation.cpp">
 			<Option target="lightsemi"/>
 		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp">
+			<Option target="lightsemi"/>
+		</Unit>
 		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.h">
 			<Option target="lightsemi"/>
 		</Unit>

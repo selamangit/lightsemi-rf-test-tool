@@ -2,3 +2,4 @@
 D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.h
  mmc:Q_OBJECT
 D:/Project/QtProject/lightsemi-rf-test-tool/main.cpp
+D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp
