@@ -2,6 +2,7 @@
 #define LIGHTNINGSEMI_H
 
 #include <QtCore/QVariant>
+#include <QtCore/QTime>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
@@ -63,8 +64,8 @@ public slots:
     }
     void on_pushButton_4_clicked()
     {
-        serial = new QSerialPort(this);
-        timer = new QTimer(this);
+        serial = new QSerialPort();
+        timer = new QTimer();
         if(serial->isOpen())
         {
             serial->clear();
@@ -77,19 +78,14 @@ public slots:
 //                serial->setPort(info);
 //            }
 //        }
+
+//比较鸡肋的功能：打开串口之后，设置combobox不可选
+//        comboBox->setEnabled(false);
+//        comboBox_2->setEnabled(false);
+//        comboBox_6->setEnabled(false);
+//        comboBox_7->setEnabled(false);
+//        comboBox_8->setEnabled(false);
         serial->setPortName(comboBox->currentText());
-        if(serial->open(QIODevice::ReadWrite))
-        {
-            QObject::connect(timer, SIGNAL(timeout()),this, SLOT(on_timer_timerout_readComData()));
-            timer->start(1000);
-        }
-        else
-        {
-            QMessageBox::about(NULL, "提示", "串口没有打开！");
-            serial->clear();
-            serial->close();
-            return;
-        }
         switch (comboBox_2->currentText().toInt())
         {
             case 1200:
@@ -121,22 +117,50 @@ public slots:
         serial->setParity(QSerialPort::NoParity);
         serial->setFlowControl(QSerialPort::NoFlowControl);
         serial->setStopBits(QSerialPort::OneStop);
+        if(serial->open(QIODevice::ReadWrite))
+        {
+//            QObject::connect(timer, SIGNAL(timeout()),this, SLOT(on_timer_timerout_readComData()));
+//            timer->start(5000);
+            QObject::connect(serial,&QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
+        }
+        else
+        {
+            QMessageBox::about(NULL, "提示", "串口没有打开！");
+            serial->clear();
+            serial->close();
+            return;
+        }
+
     }
     void on_timer_timerout_readComData()
     {
         QByteArray info = serial->readAll();
+        qDebug()<<"调用一次";
+        qDebug()<<info;
         if(!info.isEmpty())
         {
-            auto text = textBrowser->toPlainText();
+            auto text = this->textBrowser->toPlainText();
+            text.append("[").append(time.currentTime().toString("hh:mm:ss.zzz")).append("]");
             text.append(info.data());
             textBrowser->setText(text);
-            qDebug()<<"receive info:"<<info;
-            qDebug()<<"receive info:"<<info.data();
-            qDebug()<<"receive info:"<<info.count();
+            textBrowser->moveCursor(QTextCursor::End);
         }
+
+    }
+    void on_pushButton_3_clicked()
+    {
+        QString text = textEdit->toPlainText();
+        auto browser_text = this->textBrowser->toPlainText();
+        browser_text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"send:"+text+"\n");
+        textBrowser->setText(browser_text);
+        textBrowser->moveCursor(QTextCursor::End);
+        text = text.append("\r\n");
+        serial->write(text.toLocal8Bit());
+        QObject::connect(serial, &QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
     }
 public:
     QStringList QList;
+    QTime time;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QSpacerItem *horizontalSpacer_12;
@@ -263,6 +287,7 @@ public:
         pushButton_3 = new QPushButton(verticalFrame);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setStyleSheet(QString::fromUtf8("font: 12pt \"Consolas\";"));
+        QObject::connect(pushButton_3,&QPushButton::clicked,this,&Ui_MainWindow::on_pushButton_3_clicked);
 
         verticalLayout_4->addWidget(pushButton_3);
 
@@ -601,7 +626,7 @@ public:
         retranslateUi(MainWindow);
         tabWidget->setCurrentIndex(1);
         QMetaObject::connectSlotsByName(MainWindow);
-        initPort(MainWindow);
+        initPort();
     } // setupUi
     void retranslateUi(QMainWindow *MainWindow)
     {
@@ -632,7 +657,7 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab_6), QCoreApplication::translate("MainWindow", "TX\346\265\213\350\257\225", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\344\270\262\345\217\243\344\277\241\346\201\257", nullptr));
     } // retranslateUi
-    void initPort(QMainWindow *MainWindow)
+    void initPort()
     {
         foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
         {

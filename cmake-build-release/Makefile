@@ -141,30 +141,6 @@ lightsemi_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi_autogen.dir\build.make CMakeFiles/lightsemi_autogen.dir/build
 .PHONY : lightsemi_autogen/fast
 
-lightningsemi.obj: lightningsemi.cpp.obj
-.PHONY : lightningsemi.obj
-
-# target to build an object file
-lightningsemi.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj
-.PHONY : lightningsemi.cpp.obj
-
-lightningsemi.i: lightningsemi.cpp.i
-.PHONY : lightningsemi.i
-
-# target to preprocess a source file
-lightningsemi.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/lightningsemi.cpp.i
-.PHONY : lightningsemi.cpp.i
-
-lightningsemi.s: lightningsemi.cpp.s
-.PHONY : lightningsemi.s
-
-# target to generate assembly for a file
-lightningsemi.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/lightningsemi.cpp.s
-.PHONY : lightningsemi.cpp.s
-
 lightsemi_autogen/mocs_compilation.obj: lightsemi_autogen/mocs_compilation.cpp.obj
 .PHONY : lightsemi_autogen/mocs_compilation.obj
 
@@ -223,9 +199,6 @@ help:
 	@echo ... rebuild_cache
 	@echo ... lightsemi_autogen
 	@echo ... lightsemi
-	@echo ... lightningsemi.obj
-	@echo ... lightningsemi.i
-	@echo ... lightningsemi.s
 	@echo ... lightsemi_autogen/mocs_compilation.obj
 	@echo ... lightsemi_autogen/mocs_compilation.i
 	@echo ... lightsemi_autogen/mocs_compilation.s

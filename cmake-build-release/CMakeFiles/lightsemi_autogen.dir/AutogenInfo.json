@@ -146,11 +146,6 @@
 	"SETTINGS_FILE" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[
-			"D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp",
-			"MU",
-			null
-		],
 		[ "D:/Project/QtProject/lightsemi-rf-test-tool/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

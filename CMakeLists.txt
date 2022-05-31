@@ -18,7 +18,7 @@ find_package(Qt5 COMPONENTS
         REQUIRED
         SerialPort)
 
-add_executable(lightsemi main.cpp lightningsemi.h lightningsemi.cpp)
+add_executable(lightsemi main.cpp lightningsemi.h)
 target_link_libraries(lightsemi
         Qt5::Core
         Qt5::Gui
