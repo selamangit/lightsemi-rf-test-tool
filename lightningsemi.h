@@ -32,135 +32,11 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow : public QObject
 {
     Q_OBJECT
-public slots:
-    void on_comboBox_5_currentIndexChanged(int i)
-    {
-        QString text = comboBox_5->currentText();
-        if(text == "BL")
-        {
-            QList.clear();
-            comboBox_3->clear();
-            comboBox_3->addItem(QString("None"));
-            QList<<QString("1")<<QString("2")<<QString("5.5")<<QString("11");
-            comboBox_3->addItems(QList);
-        }
-        else if(text == "G")
-        {
-            QList.clear();
-            comboBox_3->clear();
-            comboBox_3->addItem(QString("None"));
-            QList<<QString("6")<<QString("9")<<QString("12")<<QString("18")<<QString("24")<<QString("36")<<QString("48")<<QString("54");
-            comboBox_3->addItems(QList);
-        }
-        else if(text == "N")
-        {
-            QList.clear();
-            comboBox_3->clear();
-            comboBox_3->addItem(QString("None"));
-            QList<<QString("1")<<QString("2")<<QString("3")<<QString("4")<<QString("5")<<QString("6")<<QString("7");
-            comboBox_3->addItems(QList);
-        }
-        comboBox_3->setCurrentIndex(0);
-    }
-    void on_pushButton_4_clicked()
-    {
-        serial = new QSerialPort();
-        timer = new QTimer();
-        if(serial->isOpen())
-        {
-            serial->clear();
-            serial->close();
-        }
-//        foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
-//        {
-//            if(info.portName() == comboBox->currentText())
-//            {
-//                serial->setPort(info);
-//            }
-//        }
 
-//比较鸡肋的功能：打开串口之后，设置combobox不可选
-//        comboBox->setEnabled(false);
-//        comboBox_2->setEnabled(false);
-//        comboBox_6->setEnabled(false);
-//        comboBox_7->setEnabled(false);
-//        comboBox_8->setEnabled(false);
-        serial->setPortName(comboBox->currentText());
-        switch (comboBox_2->currentText().toInt())
-        {
-            case 1200:
-                serial->setBaudRate(QSerialPort::Baud1200);
-                break;
-            case 2400:
-                serial->setBaudRate(QSerialPort::Baud2400);
-                break;
-            case 4800:
-                serial->setBaudRate(QSerialPort::Baud4800);
-                break;
-            case 9600:
-                serial->setBaudRate(QSerialPort::Baud9600);
-                break;
-            case 19200:
-                serial->setBaudRate(QSerialPort::Baud19200);
-                break;
-            case 38400:
-                serial->setBaudRate(QSerialPort::Baud38400);
-                break;
-            case 57600:
-                serial->setBaudRate(QSerialPort::Baud57600);
-                break;
-            case 115200:
-                serial->setBaudRate(QSerialPort::Baud115200);
-                break;
-        }
-        serial->setDataBits(QSerialPort::Data8);
-        serial->setParity(QSerialPort::NoParity);
-        serial->setFlowControl(QSerialPort::NoFlowControl);
-        serial->setStopBits(QSerialPort::OneStop);
-        if(serial->open(QIODevice::ReadWrite))
-        {
-//            QObject::connect(timer, SIGNAL(timeout()),this, SLOT(on_timer_timerout_readComData()));
-//            timer->start(5000);
-            QObject::connect(serial,&QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
-        }
-        else
-        {
-            QMessageBox::about(NULL, "提示", "串口没有打开！");
-            serial->clear();
-            serial->close();
-            return;
-        }
-
-    }
-    void on_timer_timerout_readComData()
-    {
-        QByteArray info = serial->readAll();
-        qDebug()<<"调用一次";
-        qDebug()<<info;
-        if(!info.isEmpty())
-        {
-            auto text = this->textBrowser->toPlainText();
-            text.append("[").append(time.currentTime().toString("hh:mm:ss.zzz")).append("]");
-            text.append(info.data());
-            textBrowser->setText(text);
-            textBrowser->moveCursor(QTextCursor::End);
-        }
-
-    }
-    void on_pushButton_3_clicked()
-    {
-        QString text = textEdit->toPlainText();
-        auto browser_text = this->textBrowser->toPlainText();
-        browser_text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"send:"+text+"\n");
-        textBrowser->setText(browser_text);
-        textBrowser->moveCursor(QTextCursor::End);
-        text = text.append("\r\n");
-        serial->write(text.toLocal8Bit());
-        QObject::connect(serial, &QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
-    }
 public:
     QStringList QList;
     QTime time;
+    QByteArray buffer;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QSpacerItem *horizontalSpacer_12;
@@ -565,6 +441,9 @@ public:
         pushButton_5 = new QPushButton(tab_5);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
         pushButton_5->setGeometry(QRect(20, 10, 90, 23));
+
+        QObject::connect(pushButton_5,&QPushButton::clicked,this,&Ui_MainWindow::on_pushButton_5_clicked);
+
         pushButton_6 = new QPushButton(tab_5);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
         pushButton_6->setGeometry(QRect(170, 10, 90, 23));
@@ -690,7 +569,160 @@ public:
         QList.clear();
         QList<<"1"<<"2";
         comboBox_8->addItems(QList);
+    }
+public slots:
+    void on_comboBox_5_currentIndexChanged(int i)
+    {
+        QString text = comboBox_5->currentText();
+        if(text == "BL")
+        {
+            QList.clear();
+            comboBox_3->clear();
+            comboBox_3->addItem(QString("None"));
+            QList<<QString("1")<<QString("2")<<QString("5.5")<<QString("11");
+            comboBox_3->addItems(QList);
+        }
+        else if(text == "G")
+        {
+            QList.clear();
+            comboBox_3->clear();
+            comboBox_3->addItem(QString("None"));
+            QList<<QString("6")<<QString("9")<<QString("12")<<QString("18")<<QString("24")<<QString("36")<<QString("48")<<QString("54");
+            comboBox_3->addItems(QList);
+        }
+        else if(text == "N")
+        {
+            QList.clear();
+            comboBox_3->clear();
+            comboBox_3->addItem(QString("None"));
+            QList<<QString("1")<<QString("2")<<QString("3")<<QString("4")<<QString("5")<<QString("6")<<QString("7");
+            comboBox_3->addItems(QList);
+        }
+        comboBox_3->setCurrentIndex(0);
+    }
+    void on_pushButton_4_clicked()
+    {
+        serial = new QSerialPort();
+        timer = new QTimer();
+        if(serial->isOpen())
+        {
+            serial->clear();
+            serial->close();
+        }
+//        foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
+//        {
+//            if(info.portName() == comboBox->currentText())
+//            {
+//                serial->setPort(info);
+//            }
+//        }
 
+//比较鸡肋的功能：打开串口之后，设置combobox不可选
+//        comboBox->setEnabled(false);
+//        comboBox_2->setEnabled(false);
+//        comboBox_6->setEnabled(false);
+//        comboBox_7->setEnabled(false);
+//        comboBox_8->setEnabled(false);
+        serial->setPortName(comboBox->currentText());
+        switch (comboBox_2->currentText().toInt())
+        {
+            case 1200:
+                serial->setBaudRate(QSerialPort::Baud1200);
+                break;
+            case 2400:
+                serial->setBaudRate(QSerialPort::Baud2400);
+                break;
+            case 4800:
+                serial->setBaudRate(QSerialPort::Baud4800);
+                break;
+            case 9600:
+                serial->setBaudRate(QSerialPort::Baud9600);
+                break;
+            case 19200:
+                serial->setBaudRate(QSerialPort::Baud19200);
+                break;
+            case 38400:
+                serial->setBaudRate(QSerialPort::Baud38400);
+                break;
+            case 57600:
+                serial->setBaudRate(QSerialPort::Baud57600);
+                break;
+            case 115200:
+                serial->setBaudRate(QSerialPort::Baud115200);
+                break;
+        }
+        serial->setDataBits(QSerialPort::Data8);
+        serial->setParity(QSerialPort::NoParity);
+        serial->setFlowControl(QSerialPort::NoFlowControl);
+        serial->setStopBits(QSerialPort::OneStop);
+        if(serial->open(QIODevice::ReadWrite))
+        {
+            QObject::connect(serial,&QSerialPort::readyRead,this,[=]()
+            {
+                timer->start(100);
+                buffer.append(serial->readAll());//将读到的数据放入缓冲区
+            });
+            QObject::connect(timer,&QTimer::timeout,this,&Ui_MainWindow::on_timer_timerout_readComData);
+//            QObject::connect(timer, SIGNAL(timeout()),this, SLOT(on_timer_timerout_readComData()));
+//            timer->start(1000);
+//            QObject::connect(serial,&QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
+        }
+        else
+        {
+            QMessageBox::about(NULL, "提示", "串口没有打开！");
+            serial->clear();
+            serial->close();
+            return;
+        }
+
+    }
+    void on_timer_timerout_readComData()
+    {
+//        QByteArray info = serial->readAll();
+//        if(!info.isEmpty())
+//        {
+//            auto text = this->textBrowser->toPlainText();
+//            text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"receive:");
+//            text.append(info.data()).append("\n");
+//            textBrowser->setText(text);
+//            textBrowser->moveCursor(QTextCursor::End);
+//        }
+        timer->stop();
+        if(!buffer.isEmpty())
+        {
+            auto text = this->textBrowser->toPlainText();
+            text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"receive:");
+            text.append(buffer.data()).append("\n");
+            textBrowser->setText(text);
+            textBrowser->moveCursor(QTextCursor::End);
+        }
+        buffer.clear();
+    }
+    void on_pushButton_3_clicked()
+    {
+        QString text = textEdit->toPlainText();
+        auto browser_text = this->textBrowser->toPlainText();
+        browser_text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"send:"+text+"\n");
+        textBrowser->setText(browser_text);
+        textBrowser->moveCursor(QTextCursor::End);
+        text = text.append("\r\n");
+        serial->write(text.toLocal8Bit());
+
+        QObject::connect(serial, &QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
+    }
+    void on_pushButton_5_clicked()
+    {
+        QString command("AT+PVTCMD=EVM,RXS,1,CH");
+        command.append("\r\n");
+        serial->write(command.toLocal8Bit());
+
+        command = "AT+PVTCMD=EVM,RXS,0,CH";
+        command.append("\r\n");
+        serial->write(command.toLocal8Bit());
+
+        command = "AT+PVTCMD=EVM,RXS,INFO";
+        command.append("\r\n");
+        serial->write(command.toLocal8Bit());
     }
 };
 
