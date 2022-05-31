@@ -93,16 +93,48 @@ CMakeFiles/lightsemi.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/main.cpp.s"
 	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\main.cpp -o CMakeFiles\lightsemi.dir\main.cpp.s
 
+CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
+CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
+CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj: ../lightningsemi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\lightningsemi.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\lightningsemi.cpp
+
+CMakeFiles/lightsemi.dir/lightningsemi.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/lightningsemi.cpp.i"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\lightningsemi.cpp > CMakeFiles\lightsemi.dir\lightningsemi.cpp.i
+
+CMakeFiles/lightsemi.dir/lightningsemi.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/lightningsemi.cpp.s"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\lightningsemi.cpp -o CMakeFiles\lightsemi.dir\lightningsemi.cpp.s
+
+CMakeFiles/lightsemi.dir/serialcontroller.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
+CMakeFiles/lightsemi.dir/serialcontroller.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
+CMakeFiles/lightsemi.dir/serialcontroller.cpp.obj: ../serialcontroller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lightsemi.dir/serialcontroller.cpp.obj"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\serialcontroller.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\serialcontroller.cpp
+
+CMakeFiles/lightsemi.dir/serialcontroller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/serialcontroller.cpp.i"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\serialcontroller.cpp > CMakeFiles\lightsemi.dir\serialcontroller.cpp.i
+
+CMakeFiles/lightsemi.dir/serialcontroller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/serialcontroller.cpp.s"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\serialcontroller.cpp -o CMakeFiles\lightsemi.dir\serialcontroller.cpp.s
+
 # Object files for target lightsemi
 lightsemi_OBJECTS = \
 "CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj" \
-"CMakeFiles/lightsemi.dir/main.cpp.obj"
+"CMakeFiles/lightsemi.dir/main.cpp.obj" \
+"CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj" \
+"CMakeFiles/lightsemi.dir/serialcontroller.cpp.obj"
 
 # External object files for target lightsemi
 lightsemi_EXTERNAL_OBJECTS =
 
 lightsemi.exe: CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj
 lightsemi.exe: CMakeFiles/lightsemi.dir/main.cpp.obj
+lightsemi.exe: CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj
+lightsemi.exe: CMakeFiles/lightsemi.dir/serialcontroller.cpp.obj
 lightsemi.exe: CMakeFiles/lightsemi.dir/build.make
 lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Widgets.a
 lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5SerialPort.a
@@ -111,7 +143,7 @@ lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Core.a
 lightsemi.exe: CMakeFiles/lightsemi.dir/linklibs.rsp
 lightsemi.exe: CMakeFiles/lightsemi.dir/objects1.rsp
 lightsemi.exe: CMakeFiles/lightsemi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lightsemi.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-release\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable lightsemi.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lightsemi.dir\link.txt --verbose=$(VERBOSE)
 	"D:\Clion\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E make_directory D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/plugins/platforms/
 	"D:\Clion\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E copy D:/QT/Qt5.14.2/5.14.2/mingw73_64/plugins/platforms/qwindows.dll D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/plugins/platforms/

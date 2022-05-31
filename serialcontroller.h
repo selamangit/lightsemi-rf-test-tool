@@ -1,0 +1,8 @@
+//
+// Created by Jewel_Cpress on 2022/5/31.
+//
+
+#ifndef LIGHTSEMI_SERIALCONTROLLER_H
+#define LIGHTSEMI_SERIALCONTROLLER_H
+
+#endif //LIGHTSEMI_SERIALCONTROLLER_H

@@ -6,19 +6,9 @@
 
 #IncludeRegexTransform: 
 
-D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen/EWIEGA46WW/moc_lightningsemi.cpp
-memory
--
-../../../lightningsemi.h
+D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp
+lightningsemi.h
 D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen/mocs_compilation.cpp
-EWIEGA46WW/moc_lightningsemi.cpp
-D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen/EWIEGA46WW/moc_lightningsemi.cpp
 
 D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.h
 QtCore/QVariant

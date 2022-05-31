@@ -141,6 +141,30 @@ lightsemi_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi_autogen.dir\build.make CMakeFiles/lightsemi_autogen.dir/build
 .PHONY : lightsemi_autogen/fast
 
+lightningsemi.obj: lightningsemi.cpp.obj
+.PHONY : lightningsemi.obj
+
+# target to build an object file
+lightningsemi.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj
+.PHONY : lightningsemi.cpp.obj
+
+lightningsemi.i: lightningsemi.cpp.i
+.PHONY : lightningsemi.i
+
+# target to preprocess a source file
+lightningsemi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/lightningsemi.cpp.i
+.PHONY : lightningsemi.cpp.i
+
+lightningsemi.s: lightningsemi.cpp.s
+.PHONY : lightningsemi.s
+
+# target to generate assembly for a file
+lightningsemi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/lightningsemi.cpp.s
+.PHONY : lightningsemi.cpp.s
+
 lightsemi_autogen/mocs_compilation.obj: lightsemi_autogen/mocs_compilation.cpp.obj
 .PHONY : lightsemi_autogen/mocs_compilation.obj
 
@@ -189,6 +213,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+serialcontroller.obj: serialcontroller.cpp.obj
+.PHONY : serialcontroller.obj
+
+# target to build an object file
+serialcontroller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/serialcontroller.cpp.obj
+.PHONY : serialcontroller.cpp.obj
+
+serialcontroller.i: serialcontroller.cpp.i
+.PHONY : serialcontroller.i
+
+# target to preprocess a source file
+serialcontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/serialcontroller.cpp.i
+.PHONY : serialcontroller.cpp.i
+
+serialcontroller.s: serialcontroller.cpp.s
+.PHONY : serialcontroller.s
+
+# target to generate assembly for a file
+serialcontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/serialcontroller.cpp.s
+.PHONY : serialcontroller.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -199,12 +247,18 @@ help:
 	@echo ... rebuild_cache
 	@echo ... lightsemi_autogen
 	@echo ... lightsemi
+	@echo ... lightningsemi.obj
+	@echo ... lightningsemi.i
+	@echo ... lightningsemi.s
 	@echo ... lightsemi_autogen/mocs_compilation.obj
 	@echo ... lightsemi_autogen/mocs_compilation.i
 	@echo ... lightsemi_autogen/mocs_compilation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... serialcontroller.obj
+	@echo ... serialcontroller.i
+	@echo ... serialcontroller.s
 .PHONY : help
 
 

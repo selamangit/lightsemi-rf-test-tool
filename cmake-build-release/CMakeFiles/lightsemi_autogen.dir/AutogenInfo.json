@@ -86,6 +86,12 @@
 			"MU",
 			"EWIEGA46WW/moc_lightningsemi.cpp",
 			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/serialcontroller.h",
+			"MU",
+			"EWIEGA46WW/moc_serialcontroller.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -146,7 +152,17 @@
 	"SETTINGS_FILE" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "D:/Project/QtProject/lightsemi-rf-test-tool/main.cpp", "MU", null ]
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp",
+			"MU",
+			null
+		],
+		[ "D:/Project/QtProject/lightsemi-rf-test-tool/main.cpp", "MU", null ],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/serialcontroller.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
