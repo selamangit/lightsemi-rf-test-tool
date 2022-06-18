@@ -1,5 +1,16 @@
-//
-// Created by Jewel_Cpress on 2022/5/31.
-//
-
 #include "serialcontroller.h"
+#include "lightningsemi.h"
+
+SerialController::SerialController(QObject *parent):QObject(parent)
+{
+    qDebug()<<"创建serialcontroller成功";
+}
+SerialController::~SerialController()
+{
+
+}
+
+
+
+
+

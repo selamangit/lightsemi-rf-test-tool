@@ -1,7 +1,11 @@
 #include "lightningsemi.h"
+
 Ui_MainWindow::Ui_MainWindow(QWidget *parent): QMainWindow(parent)
 {
     setupUi();
+    createConnect();
+    serialController = new SerialController();
+    serialController->_port = new QSerialPort();
 }
 void Ui_MainWindow::setupUi()
 {
@@ -50,7 +54,6 @@ void Ui_MainWindow::setupUi()
     pushButton_3 = new QPushButton(verticalFrame);
     pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
     pushButton_3->setStyleSheet(QString::fromUtf8("font: 12pt \"Consolas\";"));
-    QObject::connect(pushButton_3,&QPushButton::clicked,this,&Ui_MainWindow::on_pushButton_3_clicked);
 
     verticalLayout_4->addWidget(pushButton_3);
 
@@ -97,7 +100,7 @@ void Ui_MainWindow::setupUi()
     pushButton_4 = new QPushButton(gridFrame);
     pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
     pushButton_4->setStyleSheet(QString::fromUtf8(""));
-    QObject::connect(pushButton_4, SIGNAL(clicked(bool)),this, SLOT(on_pushButton_4_clicked()));
+
 
 
     gridLayout_2->addWidget(pushButton_4, 8, 0, 1, 1);
@@ -270,7 +273,7 @@ void Ui_MainWindow::setupUi()
     comboBox_5->addItem(QString("None"));
     comboBox_5->addItems(QList);
     comboBox_5->setCurrentIndex(0);
-    QObject::connect(comboBox_5, SIGNAL(currentIndexChanged(int)),this, SLOT(on_comboBox_5_currentIndexChanged(int)));
+
 
 
     gridLayout_7->addWidget(comboBox_5, 0, 1, 1, 1);
@@ -392,7 +395,7 @@ void Ui_MainWindow::setupUi()
     retranslateUi();
     tabWidget->setCurrentIndex(1);
     QMetaObject::connectSlotsByName(this);
-    initPort();
+    ShowPort();
 } // setupUi
 void Ui_MainWindow::retranslateUi()
 {
@@ -423,3 +426,168 @@ void Ui_MainWindow::retranslateUi()
     tabWidget->setTabText(tabWidget->indexOf(tab_6), QCoreApplication::translate("MainWindow", "TX\346\265\213\350\257\225", nullptr));
     label->setText(QCoreApplication::translate("MainWindow", "\344\270\262\345\217\243\344\277\241\346\201\257", nullptr));
 } // retranslateUi
+
+void Ui_MainWindow::ShowPort()
+{
+    foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
+    {
+        comboBox->addItem(info.portName());
+    }
+    QList.clear();
+    QList<<"None"<<"1200"<<"2400"<<"4800"<<"9600"
+         <<"19200"<<"38400"<<"57600"<<"115200";
+    comboBox_2->addItems(QList);
+    QList.clear();
+    QList<<"无"<<"奇"<<"偶";
+    comboBox_7->addItems(QList);
+    QList.clear();
+    QList<<"5"<<"6"<<"7"<<"8";
+    comboBox_6->addItems(QList);
+    QList.clear();
+    QList<<"1"<<"2";
+    comboBox_8->addItems(QList);
+}
+void Ui_MainWindow::createConnect()
+{
+    QObject::connect(pushButton_4, &QPushButton::clicked,this, &Ui_MainWindow::on_pushButton_4_clicked);
+    QObject::connect(comboBox_5, static_cast<void(QComboBox::*)(int index)>(&QComboBox::currentIndexChanged),this, &Ui_MainWindow::on_comboBox_5_currentIndexChanged);
+    QObject::connect(pushButton_3,&QPushButton::clicked,this,&Ui_MainWindow::on_pushButton_3_clicked);
+    QObject::connect(serialController->_port, &QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
+}
+void Ui_MainWindow::on_comboBox_5_currentIndexChanged(int i)
+{
+    QString text = comboBox_5->currentText();
+    if(text == "BL")
+    {
+        QList.clear();
+        comboBox_3->clear();
+        comboBox_3->addItem(QString("None"));
+        QList<<QString("1")<<QString("2")<<QString("5.5")<<QString("11");
+        comboBox_3->addItems(QList);
+    }
+    else if(text == "G")
+    {
+        QList.clear();
+        comboBox_3->clear();
+        comboBox_3->addItem(QString("None"));
+        QList<<QString("6")<<QString("9")<<QString("12")<<QString("18")<<QString("24")<<QString("36")<<QString("48")<<QString("54");
+        comboBox_3->addItems(QList);
+    }
+    else if(text == "N")
+    {
+        QList.clear();
+        comboBox_3->clear();
+        comboBox_3->addItem(QString("None"));
+        QList<<QString("1")<<QString("2")<<QString("3")<<QString("4")<<QString("5")<<QString("6")<<QString("7");
+        comboBox_3->addItems(QList);
+    }
+    comboBox_3->setCurrentIndex(0);
+}
+void Ui_MainWindow::on_pushButton_4_clicked()
+{
+
+    timer = new QTimer();
+    if(serialController->_port->isOpen())
+    {
+        serialController->_port->clear();
+        serialController->_port->close();
+    }
+//        foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
+//        {
+//            if(info.portName() == comboBox->currentText())
+//            {
+//                serial->setPort(info);
+//            }
+//        }
+
+//比较鸡肋的功能：打开串口之后，设置combobox不可选
+//        comboBox->setEnabled(false);
+//        comboBox_2->setEnabled(false);
+//        comboBox_6->setEnabled(false);
+//        comboBox_7->setEnabled(false);
+//        comboBox_8->setEnabled(false);
+    serialController->_port->setPortName(comboBox->currentText());
+    switch (comboBox_2->currentText().toInt())
+    {
+        case 1200:
+            serialController->_port->setBaudRate(QSerialPort::Baud1200);
+            break;
+        case 2400:
+            serialController->_port->setBaudRate(QSerialPort::Baud2400);
+            break;
+        case 4800:
+            serialController->_port->setBaudRate(QSerialPort::Baud4800);
+            break;
+        case 9600:
+            serialController->_port->setBaudRate(QSerialPort::Baud9600);
+            break;
+        case 19200:
+            serialController->_port->setBaudRate(QSerialPort::Baud19200);
+            break;
+        case 38400:
+            serialController->_port->setBaudRate(QSerialPort::Baud38400);
+            break;
+        case 57600:
+            serialController->_port->setBaudRate(QSerialPort::Baud57600);
+            break;
+        case 115200:
+            serialController->_port->setBaudRate(QSerialPort::Baud115200);
+            break;
+    }
+    serialController->_port->setDataBits(QSerialPort::Data8);
+    serialController->_port->setParity(QSerialPort::NoParity);
+    serialController->_port->setFlowControl(QSerialPort::NoFlowControl);
+    serialController->_port->setStopBits(QSerialPort::OneStop);
+    if(serialController->_port->open(QIODevice::ReadWrite))
+    {
+        QObject::connect(serialController->_port,&QSerialPort::readyRead,this,[=]()
+        {
+            timer->start(100);
+            buffer.append(serialController->_port->readAll());//将读到的数据放入缓冲区
+        });
+        QObject::connect(timer,&QTimer::timeout,this,&Ui_MainWindow::on_timer_timerout_readComData);
+//            QObject::connect(timer, SIGNAL(timeout()),this, SLOT(on_timer_timerout_readComData()));
+//            timer->start(1000);
+//            QObject::connect(serial,&QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
+    }
+    else
+    {
+        QMessageBox::about(NULL, "提示", "串口没有打开！");
+        serialController->_port->clear();
+        serialController->_port->close();
+        return;
+    }
+}
+void Ui_MainWindow::on_pushButton_3_clicked()
+{
+    QString text = textEdit->toPlainText();
+    auto browser_text = this->textBrowser->toPlainText();
+    browser_text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"send:"+text+"\n");
+    textBrowser->setText(browser_text);
+    textBrowser->moveCursor(QTextCursor::End);
+    text = text.append("\r\n");
+    serialController->_port->write(text.toLocal8Bit());
+
+}
+void Ui_MainWindow::on_timer_timerout_readComData()
+{
+//        QByteArray info = serial->readAll();
+//        if(!info.isEmpty())
+//        {
+//            auto text = this->textBrowser->toPlainText();
+//            text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"receive:");
+//            text.append(info.data()).append("\n");
+//            textBrowser->setText(text);
+//            textBrowser->moveCursor(QTextCursor::End);
+//        }
+    timer->stop();
+    if(!buffer.isEmpty())
+    {
+        auto text = this->textBrowser->toPlainText();
+        text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"receive:");
+        text.append(buffer.data()).append("\n");
+        textBrowser->setText(text);
+        textBrowser->moveCursor(QTextCursor::End);
+    }
+    buffer.clear();
+}
