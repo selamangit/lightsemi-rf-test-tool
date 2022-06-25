@@ -82,6 +82,24 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.h",
+			"MU",
+			"EWIEGA46WW/moc_PortReadThread.cpp",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.h",
+			"MU",
+			"EWIEGA46WW/moc_PortWriteThread.cpp",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.h",
+			"MU",
+			"EWIEGA46WW/moc_SerialPort.cpp",
+			null
+		],
+		[
 			"D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.h",
 			"MU",
 			"EWIEGA46WW/moc_lightningsemi.cpp",
@@ -152,6 +170,21 @@
 	"SETTINGS_FILE" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.cpp",
+			"MU",
+			null
+		],
 		[
 			"D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp",
 			"MU",

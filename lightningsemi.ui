@@ -186,45 +186,6 @@
     <item row="2" column="0" rowspan="3" colspan="2">
      <widget class="QFrame" name="gridFrame">
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="8" column="0">
-        <widget class="QPushButton" name="pushButton_4">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>打开串口</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1" colspan="2">
-        <widget class="QComboBox" name="comboBox"/>
-       </item>
-       <item row="8" column="1">
-        <widget class="QPushButton" name="pushButton">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>关闭串口</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1" colspan="2">
-        <widget class="QComboBox" name="comboBox_2"/>
-       </item>
-       <item row="6" column="0">
-        <widget class="QLabel" name="label_9">
-         <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
-         </property>
-         <property name="text">
-          <string>停止位:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_4">
          <property name="styleSheet">
@@ -235,6 +196,30 @@
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>打开串口</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>串口信息</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QPushButton" name="pushButton_12">
+         <property name="text">
+          <string>刷新串口</string>
          </property>
         </widget>
        </item>
@@ -251,54 +236,21 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="1" colspan="2">
-        <widget class="QComboBox" name="comboBox_7"/>
-       </item>
-       <item row="6" column="1" colspan="2">
-        <widget class="QComboBox" name="comboBox_8"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_8">
+       <item row="5" column="1">
+        <widget class="QPushButton" name="pushButton">
          <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
+          <string notr="true"/>
          </property>
          <property name="text">
-          <string>校验位:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <string>关闭串口</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_7">
-         <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
-         </property>
-         <property name="text">
-          <string>数据位:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
+       <item row="1" column="1" colspan="2">
+        <widget class="QComboBox" name="comboBox"/>
        </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_10">
-         <property name="text">
-          <string>串口信息</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1" colspan="2">
-        <widget class="QComboBox" name="comboBox_6"/>
-       </item>
-       <item row="8" column="2">
-        <widget class="QPushButton" name="pushButton_12">
-         <property name="text">
-          <string>刷新串口</string>
-         </property>
-        </widget>
+       <item row="2" column="1" colspan="2">
+        <widget class="QComboBox" name="comboBox_2"/>
        </item>
       </layout>
      </widget>
@@ -527,7 +479,7 @@
        <item row="4" column="0">
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="tab_5">
           <property name="cursor">
@@ -536,102 +488,64 @@
           <attribute name="title">
            <string>RX测试</string>
           </attribute>
-          <widget class="QPushButton" name="pushButton_5">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>10</y>
-             <width>90</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>单次RX测试</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pushButton_6">
-           <property name="geometry">
-            <rect>
-             <x>170</x>
-             <y>10</y>
-             <width>90</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>连续RX测试</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pushButton_7">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>40</y>
-             <width>90</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>读取RX信息</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pushButton_8">
-           <property name="geometry">
-            <rect>
-             <x>170</x>
-             <y>40</y>
-             <width>90</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>停止RX测试</string>
-           </property>
-          </widget>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_5">
+             <property name="text">
+              <string>单次RX测试</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_6">
+             <property name="text">
+              <string>连续RX测试</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pushButton_7">
+             <property name="text">
+              <string>读取RX信息</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pushButton_8">
+             <property name="text">
+              <string>停止RX测试</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
          <widget class="QWidget" name="tab_6">
           <attribute name="title">
            <string>TX测试</string>
           </attribute>
-          <widget class="QPushButton" name="pushButton_9">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>10</y>
-             <width>90</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>TX测试(11B)</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pushButton_10">
-           <property name="geometry">
-            <rect>
-             <x>170</x>
-             <y>10</y>
-             <width>90</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>TX测试(11G)</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pushButton_11">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>40</y>
-             <width>90</width>
-             <height>23</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>TX测试(11N)</string>
-           </property>
-          </widget>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_9">
+             <property name="text">
+              <string>TX测试(11B)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_10">
+             <property name="text">
+              <string>TX测试(11G)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pushButton_11">
+             <property name="text">
+              <string>TX测试(11N)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </widget>
        </item>

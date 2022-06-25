@@ -9,8 +9,3 @@ SerialController::~SerialController()
 {
 
 }
-
-
-
-
-

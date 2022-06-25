@@ -3,9 +3,9 @@
 Ui_MainWindow::Ui_MainWindow(QWidget *parent): QMainWindow(parent)
 {
     setupUi();
-    createConnect();
     serialController = new SerialController();
     serialController->_port = new QSerialPort();
+    createConnect();
 }
 void Ui_MainWindow::setupUi()
 {
@@ -121,13 +121,6 @@ void Ui_MainWindow::setupUi()
 
     gridLayout_2->addWidget(comboBox_2, 2, 1, 1, 2);
 
-    label_9 = new QLabel(gridFrame);
-    label_9->setObjectName(QString::fromUtf8("label_9"));
-    label_9->setStyleSheet(QString::fromUtf8("font: 12pt \"Consolas\";"));
-    label_9->setAlignment(Qt::AlignCenter);
-
-    gridLayout_2->addWidget(label_9, 6, 0, 1, 1);
-
     label_4 = new QLabel(gridFrame);
     label_4->setObjectName(QString::fromUtf8("label_4"));
     label_4->setStyleSheet(QString::fromUtf8("font: 12pt \"Consolas\";"));
@@ -142,39 +135,10 @@ void Ui_MainWindow::setupUi()
 
     gridLayout_2->addWidget(label_2, 1, 0, 1, 1);
 
-    comboBox_7 = new QComboBox(gridFrame);
-    comboBox_7->setObjectName(QString::fromUtf8("comboBox_7"));
-
-    gridLayout_2->addWidget(comboBox_7, 4, 1, 1, 2);
-
-    comboBox_8 = new QComboBox(gridFrame);
-    comboBox_8->setObjectName(QString::fromUtf8("comboBox_8"));
-
-    gridLayout_2->addWidget(comboBox_8, 6, 1, 1, 2);
-
-    label_8 = new QLabel(gridFrame);
-    label_8->setObjectName(QString::fromUtf8("label_8"));
-    label_8->setStyleSheet(QString::fromUtf8("font: 12pt \"Consolas\";"));
-    label_8->setAlignment(Qt::AlignCenter);
-
-    gridLayout_2->addWidget(label_8, 4, 0, 1, 1);
-
-    label_7 = new QLabel(gridFrame);
-    label_7->setObjectName(QString::fromUtf8("label_7"));
-    label_7->setStyleSheet(QString::fromUtf8("font: 12pt \"Consolas\";"));
-    label_7->setAlignment(Qt::AlignCenter);
-
-    gridLayout_2->addWidget(label_7, 3, 0, 1, 1);
-
     label_10 = new QLabel(gridFrame);
     label_10->setObjectName(QString::fromUtf8("label_10"));
 
     gridLayout_2->addWidget(label_10, 0, 0, 1, 1);
-
-    comboBox_6 = new QComboBox(gridFrame);
-    comboBox_6->setObjectName(QString::fromUtf8("comboBox_6"));
-
-    gridLayout_2->addWidget(comboBox_6, 3, 1, 1, 2);
 
     pushButton_12 = new QPushButton(gridFrame);
     pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
@@ -328,37 +292,53 @@ void Ui_MainWindow::setupUi()
     tab_5 = new QWidget();
     tab_5->setObjectName(QString::fromUtf8("tab_5"));
     tab_5->setCursor(QCursor(Qt::ArrowCursor));
+    gridLayout_8 = new QGridLayout(tab_5);
+    gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
     pushButton_5 = new QPushButton(tab_5);
     pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-    pushButton_5->setGeometry(QRect(20, 10, 90, 23));
 
-    QObject::connect(pushButton_5,&QPushButton::clicked,this,&Ui_MainWindow::on_pushButton_5_clicked);
+    gridLayout_8->addWidget(pushButton_5, 0, 0, 1, 1);
 
     pushButton_6 = new QPushButton(tab_5);
     pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-    pushButton_6->setGeometry(QRect(170, 10, 90, 23));
+
+    gridLayout_8->addWidget(pushButton_6, 0, 1, 1, 1);
+
     pushButton_7 = new QPushButton(tab_5);
     pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
-    pushButton_7->setGeometry(QRect(20, 40, 90, 23));
+
+    gridLayout_8->addWidget(pushButton_7, 1, 0, 1, 1);
+
     pushButton_8 = new QPushButton(tab_5);
     pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
-    pushButton_8->setGeometry(QRect(170, 40, 90, 23));
+
+    gridLayout_8->addWidget(pushButton_8, 1, 1, 1, 1);
+
     tabWidget->addTab(tab_5, QString());
+
     tab_6 = new QWidget();
     tab_6->setObjectName(QString::fromUtf8("tab_6"));
+    gridLayout_3 = new QGridLayout(tab_6);
+    gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+
     pushButton_9 = new QPushButton(tab_6);
     pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
-    pushButton_9->setGeometry(QRect(20, 10, 90, 23));
+
+    gridLayout_3->addWidget(pushButton_9, 0, 0, 1, 1);
+
     pushButton_10 = new QPushButton(tab_6);
     pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
-    pushButton_10->setGeometry(QRect(170, 10, 90, 23));
+
+    gridLayout_3->addWidget(pushButton_10, 0, 1, 1, 1);
+
     pushButton_11 = new QPushButton(tab_6);
     pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
-    pushButton_11->setGeometry(QRect(20, 40, 90, 23));
+
+    gridLayout_3->addWidget(pushButton_11, 1, 0, 1, 1);
+
     tabWidget->addTab(tab_6, QString());
 
     gridLayout_6->addWidget(tabWidget, 4, 0, 1, 1);
-
 
     gridLayout->addWidget(gridFrame1, 6, 0, 3, 2);
 
@@ -404,11 +384,10 @@ void Ui_MainWindow::retranslateUi()
     pushButton_2->setText(QCoreApplication::translate("MainWindow", "\346\270\205\347\251\272\344\270\262\345\217\243\344\277\241\346\201\257", nullptr));
     pushButton_4->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200\344\270\262\345\217\243", nullptr));
     pushButton->setText(QCoreApplication::translate("MainWindow", "\345\205\263\351\227\255\344\270\262\345\217\243", nullptr));
-    label_9->setText(QCoreApplication::translate("MainWindow", "\345\201\234\346\255\242\344\275\215:", nullptr));
+
     label_4->setText(QCoreApplication::translate("MainWindow", "\346\263\242\347\211\271\347\216\207:", nullptr));
     label_2->setText(QCoreApplication::translate("MainWindow", "\344\270\262\345\217\243\345\217\267:", nullptr));
-    label_8->setText(QCoreApplication::translate("MainWindow", "\346\240\241\351\252\214\344\275\215:", nullptr));
-    label_7->setText(QCoreApplication::translate("MainWindow", "\346\225\260\346\215\256\344\275\215:", nullptr));
+
     label_10->setText(QCoreApplication::translate("MainWindow", "\344\270\262\345\217\243\344\277\241\346\201\257", nullptr));
     pushButton_12->setText(QCoreApplication::translate("MainWindow", "\345\210\267\346\226\260\344\270\262\345\217\243", nullptr));
     label_11->setText(QCoreApplication::translate("MainWindow", "\344\270\262\345\217\243\347\203\247\345\275\225", nullptr));
@@ -437,15 +416,6 @@ void Ui_MainWindow::ShowPort()
     QList<<"None"<<"1200"<<"2400"<<"4800"<<"9600"
          <<"19200"<<"38400"<<"57600"<<"115200";
     comboBox_2->addItems(QList);
-    QList.clear();
-    QList<<"无"<<"奇"<<"偶";
-    comboBox_7->addItems(QList);
-    QList.clear();
-    QList<<"5"<<"6"<<"7"<<"8";
-    comboBox_6->addItems(QList);
-    QList.clear();
-    QList<<"1"<<"2";
-    comboBox_8->addItems(QList);
 }
 void Ui_MainWindow::createConnect()
 {
@@ -453,6 +423,7 @@ void Ui_MainWindow::createConnect()
     QObject::connect(comboBox_5, static_cast<void(QComboBox::*)(int index)>(&QComboBox::currentIndexChanged),this, &Ui_MainWindow::on_comboBox_5_currentIndexChanged);
     QObject::connect(pushButton_3,&QPushButton::clicked,this,&Ui_MainWindow::on_pushButton_3_clicked);
     QObject::connect(serialController->_port, &QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
+    QObject::connect(pushButton_5,&QPushButton::clicked,this,&Ui_MainWindow::on_pushButton_5_clicked);
 }
 void Ui_MainWindow::on_comboBox_5_currentIndexChanged(int i)
 {
@@ -503,9 +474,6 @@ void Ui_MainWindow::on_pushButton_4_clicked()
 //比较鸡肋的功能：打开串口之后，设置combobox不可选
 //        comboBox->setEnabled(false);
 //        comboBox_2->setEnabled(false);
-//        comboBox_6->setEnabled(false);
-//        comboBox_7->setEnabled(false);
-//        comboBox_8->setEnabled(false);
     serialController->_port->setPortName(comboBox->currentText());
     switch (comboBox_2->currentText().toInt())
     {
@@ -542,7 +510,7 @@ void Ui_MainWindow::on_pushButton_4_clicked()
     {
         QObject::connect(serialController->_port,&QSerialPort::readyRead,this,[=]()
         {
-            timer->start(100);
+            timer->start(1000);
             buffer.append(serialController->_port->readAll());//将读到的数据放入缓冲区
         });
         QObject::connect(timer,&QTimer::timeout,this,&Ui_MainWindow::on_timer_timerout_readComData);
@@ -558,6 +526,19 @@ void Ui_MainWindow::on_pushButton_4_clicked()
         return;
     }
 }
+void Ui_MainWindow::on_timer_timerout_readComData()
+{
+    timer->stop();
+    if(!buffer.isEmpty())
+    {
+        auto text = this->textBrowser->toPlainText();
+        //text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"receive:");
+        text.append(buffer.data());
+        textBrowser->setText(text);
+        textBrowser->moveCursor(QTextCursor::End);
+    }
+    buffer.clear();
+}
 void Ui_MainWindow::on_pushButton_3_clicked()
 {
     QString text = textEdit->toPlainText();
@@ -569,25 +550,17 @@ void Ui_MainWindow::on_pushButton_3_clicked()
     serialController->_port->write(text.toLocal8Bit());
 
 }
-void Ui_MainWindow::on_timer_timerout_readComData()
+void Ui_MainWindow::on_pushButton_5_clicked()
 {
-//        QByteArray info = serial->readAll();
-//        if(!info.isEmpty())
-//        {
-//            auto text = this->textBrowser->toPlainText();
-//            text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"receive:");
-//            text.append(info.data()).append("\n");
-//            textBrowser->setText(text);
-//            textBrowser->moveCursor(QTextCursor::End);
-//        }
-    timer->stop();
-    if(!buffer.isEmpty())
-    {
-        auto text = this->textBrowser->toPlainText();
-        text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"receive:");
-        text.append(buffer.data()).append("\n");
-        textBrowser->setText(text);
-        textBrowser->moveCursor(QTextCursor::End);
-    }
-    buffer.clear();
+    QString command("AT+PVTCMD=EVM,RXS,1,CH");
+    command.append("\r\n");
+    serialController->_port->write(command.toLocal8Bit());
+
+//    command = "AT+PVTCMD=EVM,RXS,0,CH";
+//    command.append("\r\n");
+//    serialController->_port->write(command.toLocal8Bit());
+//
+//    command = "AT+PVTCMD=EVM,RXS,INFO";
+//    command.append("\r\n");
+//    serialController->_port->write(command.toLocal8Bit());
 }

@@ -116,6 +116,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.cpp">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.h">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.cpp">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.h">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.cpp">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.h">
+			<Option target="lightsemi"/>
+		</Unit>
 		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen/mocs_compilation.cpp">
 			<Option target="lightsemi"/>
 		</Unit>

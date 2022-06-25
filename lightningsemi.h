@@ -98,11 +98,13 @@ public:
     QLabel *label_5;
     QLabel *label_6;
     QTabWidget *tabWidget;
+    QGridLayout *gridLayout_8;
     QWidget *tab_5;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
     QPushButton *pushButton_7;
     QPushButton *pushButton_8;
+    QGridLayout *gridLayout_3;
     QWidget *tab_6;
     QPushButton *pushButton_9;
     QPushButton *pushButton_10;
@@ -113,7 +115,6 @@ public:
     QSpacerItem *verticalSpacer_3;
     QSpacerItem *horizontalSpacer;
     QTextBrowser *textBrowser;
-    QSerialPort *serial;
     QTimer *timer;
     SerialController *serialController;
 
@@ -130,20 +131,7 @@ public slots:
     void on_pushButton_4_clicked();
     void on_timer_timerout_readComData();
     void on_pushButton_3_clicked();
-    void on_pushButton_5_clicked()
-    {
-        QString command("AT+PVTCMD=EVM,RXS,1,CH");
-        command.append("\r\n");
-        serial->write(command.toLocal8Bit());
-
-        command = "AT+PVTCMD=EVM,RXS,0,CH";
-        command.append("\r\n");
-        serial->write(command.toLocal8Bit());
-
-        command = "AT+PVTCMD=EVM,RXS,INFO";
-        command.append("\r\n");
-        serial->write(command.toLocal8Bit());
-    }
+    void on_pushButton_5_clicked();
 };
 
 namespace Ui {

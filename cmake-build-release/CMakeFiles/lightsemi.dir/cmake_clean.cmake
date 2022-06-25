@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj"
+  "CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj"
+  "CMakeFiles/lightsemi.dir/SerialPort.cpp.obj"
   "CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj"
   "CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/lightsemi.dir/main.cpp.obj"

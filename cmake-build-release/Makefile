@@ -141,6 +141,78 @@ lightsemi_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi_autogen.dir\build.make CMakeFiles/lightsemi_autogen.dir/build
 .PHONY : lightsemi_autogen/fast
 
+PortReadThread.obj: PortReadThread.cpp.obj
+.PHONY : PortReadThread.obj
+
+# target to build an object file
+PortReadThread.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj
+.PHONY : PortReadThread.cpp.obj
+
+PortReadThread.i: PortReadThread.cpp.i
+.PHONY : PortReadThread.i
+
+# target to preprocess a source file
+PortReadThread.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/PortReadThread.cpp.i
+.PHONY : PortReadThread.cpp.i
+
+PortReadThread.s: PortReadThread.cpp.s
+.PHONY : PortReadThread.s
+
+# target to generate assembly for a file
+PortReadThread.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/PortReadThread.cpp.s
+.PHONY : PortReadThread.cpp.s
+
+PortWriteThread.obj: PortWriteThread.cpp.obj
+.PHONY : PortWriteThread.obj
+
+# target to build an object file
+PortWriteThread.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj
+.PHONY : PortWriteThread.cpp.obj
+
+PortWriteThread.i: PortWriteThread.cpp.i
+.PHONY : PortWriteThread.i
+
+# target to preprocess a source file
+PortWriteThread.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/PortWriteThread.cpp.i
+.PHONY : PortWriteThread.cpp.i
+
+PortWriteThread.s: PortWriteThread.cpp.s
+.PHONY : PortWriteThread.s
+
+# target to generate assembly for a file
+PortWriteThread.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/PortWriteThread.cpp.s
+.PHONY : PortWriteThread.cpp.s
+
+SerialPort.obj: SerialPort.cpp.obj
+.PHONY : SerialPort.obj
+
+# target to build an object file
+SerialPort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/SerialPort.cpp.obj
+.PHONY : SerialPort.cpp.obj
+
+SerialPort.i: SerialPort.cpp.i
+.PHONY : SerialPort.i
+
+# target to preprocess a source file
+SerialPort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/SerialPort.cpp.i
+.PHONY : SerialPort.cpp.i
+
+SerialPort.s: SerialPort.cpp.s
+.PHONY : SerialPort.s
+
+# target to generate assembly for a file
+SerialPort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lightsemi.dir\build.make CMakeFiles/lightsemi.dir/SerialPort.cpp.s
+.PHONY : SerialPort.cpp.s
+
 lightningsemi.obj: lightningsemi.cpp.obj
 .PHONY : lightningsemi.obj
 
@@ -247,6 +319,15 @@ help:
 	@echo ... rebuild_cache
 	@echo ... lightsemi_autogen
 	@echo ... lightsemi
+	@echo ... PortReadThread.obj
+	@echo ... PortReadThread.i
+	@echo ... PortReadThread.s
+	@echo ... PortWriteThread.obj
+	@echo ... PortWriteThread.i
+	@echo ... PortWriteThread.s
+	@echo ... SerialPort.obj
+	@echo ... SerialPort.i
+	@echo ... SerialPort.s
 	@echo ... lightningsemi.obj
 	@echo ... lightningsemi.i
 	@echo ... lightningsemi.s

@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj"
+  "D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj"
+  "D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi.dir/SerialPort.cpp.obj"
   "D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj"
   "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen/mocs_compilation.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj"
   "D:/Project/QtProject/lightsemi-rf-test-tool/main.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi.dir/main.cpp.obj"
