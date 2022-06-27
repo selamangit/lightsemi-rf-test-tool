@@ -1,12 +1,39 @@
+#include <QThread>
+#include <QMessageBox>
+
 #include "lightningsemi.h"
+#include "SerialPort.h"
+#include "PortWriteThread.h"
+#include "PortReadThread.h"
 
 Ui_MainWindow::Ui_MainWindow(QWidget *parent): QMainWindow(parent)
 {
     setupUi();
-    serialController = new SerialController();
-    serialController->_port = new QSerialPort();
+    serialPort = new SerialPort();
+
+    qDebug()<<"Main:"<<QThread::currentThreadId();
+    QThread *portThread = new QThread();
+    serialPort->moveToThread(portThread);
+    this->connect(serialPort,&SerialPort::ThreadStop,portThread,&QThread::quit);
+    this->connect(portThread,&QThread::finished,serialPort,&SerialPort::deleteLater);
+    this->connect(portThread,&QThread::finished,portThread,&QThread::deleteLater);
+    this->connect(portThread,&QThread::started,serialPort,&SerialPort::Run);
+
+    portThread->start();
+
+    readObj = new PortReadThread();
+    QThread *readThread = new QThread();
+    readObj->moveToThread(readThread);
+    this->connect(readThread,&QThread::started,readObj,&PortReadThread::Run);
+    this->connect(readObj,&PortReadThread::ThreadStop,readThread,&QThread::quit);
+    this->connect(readThread,&QThread::finished,readObj,&PortReadThread::deleteLater);
+    this->connect(readThread,&QThread::finished,readThread,&QThread::deleteLater);
+    this->connect(serialPort,&SerialPort::SendReadData,this,&Ui_MainWindow::ShowData);
+
     createConnect();
+
 }
+
 void Ui_MainWindow::setupUi()
 {
     if (this->objectName().isEmpty())
@@ -14,6 +41,7 @@ void Ui_MainWindow::setupUi()
     this->resize(1073, 699);
     centralwidget = new QWidget(this);
     centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+    centralwidget->setMinimumSize(800,600);
     gridLayout = new QGridLayout(centralwidget);
     gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
     horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -304,15 +332,10 @@ void Ui_MainWindow::setupUi()
 
     gridLayout_8->addWidget(pushButton_6, 0, 1, 1, 1);
 
-    pushButton_7 = new QPushButton(tab_5);
-    pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
-
-    gridLayout_8->addWidget(pushButton_7, 1, 0, 1, 1);
-
     pushButton_8 = new QPushButton(tab_5);
     pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
 
-    gridLayout_8->addWidget(pushButton_8, 1, 1, 1, 1);
+    gridLayout_8->addWidget(pushButton_8, 1, 0, 1, 2);
 
     tabWidget->addTab(tab_5, QString());
 
@@ -326,15 +349,6 @@ void Ui_MainWindow::setupUi()
 
     gridLayout_3->addWidget(pushButton_9, 0, 0, 1, 1);
 
-    pushButton_10 = new QPushButton(tab_6);
-    pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
-
-    gridLayout_3->addWidget(pushButton_10, 0, 1, 1, 1);
-
-    pushButton_11 = new QPushButton(tab_6);
-    pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
-
-    gridLayout_3->addWidget(pushButton_11, 1, 0, 1, 1);
 
     tabWidget->addTab(tab_6, QString());
 
@@ -376,7 +390,8 @@ void Ui_MainWindow::setupUi()
     tabWidget->setCurrentIndex(1);
     QMetaObject::connectSlotsByName(this);
     ShowPort();
-} // setupUi
+}
+
 void Ui_MainWindow::retranslateUi()
 {
     this->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
@@ -396,18 +411,20 @@ void Ui_MainWindow::retranslateUi()
     label_6->setText(QCoreApplication::translate("MainWindow", "\344\277\241\351\201\223", nullptr));
     pushButton_5->setText(QCoreApplication::translate("MainWindow", "\345\215\225\346\254\241RX\346\265\213\350\257\225", nullptr));
     pushButton_6->setText(QCoreApplication::translate("MainWindow", "\350\277\236\347\273\255RX\346\265\213\350\257\225", nullptr));
-    pushButton_7->setText(QCoreApplication::translate("MainWindow", "\350\257\273\345\217\226RX\344\277\241\346\201\257", nullptr));
+
     pushButton_8->setText(QCoreApplication::translate("MainWindow", "\345\201\234\346\255\242RX\346\265\213\350\257\225", nullptr));
     tabWidget->setTabText(tabWidget->indexOf(tab_5), QCoreApplication::translate("MainWindow", "RX\346\265\213\350\257\225", nullptr));
     pushButton_9->setText(QCoreApplication::translate("MainWindow", "TX\346\265\213\350\257\225(11B)", nullptr));
-    pushButton_10->setText(QCoreApplication::translate("MainWindow", "TX\346\265\213\350\257\225(11G)", nullptr));
-    pushButton_11->setText(QCoreApplication::translate("MainWindow", "TX\346\265\213\350\257\225(11N)", nullptr));
+
+
     tabWidget->setTabText(tabWidget->indexOf(tab_6), QCoreApplication::translate("MainWindow", "TX\346\265\213\350\257\225", nullptr));
     label->setText(QCoreApplication::translate("MainWindow", "\344\270\262\345\217\243\344\277\241\346\201\257", nullptr));
 } // retranslateUi
 
 void Ui_MainWindow::ShowPort()
 {
+    comboBox->clear();
+    comboBox_2->clear();
     foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
     {
         comboBox->addItem(info.portName());
@@ -417,15 +434,32 @@ void Ui_MainWindow::ShowPort()
          <<"19200"<<"38400"<<"57600"<<"115200";
     comboBox_2->addItems(QList);
 }
+
 void Ui_MainWindow::createConnect()
 {
-    QObject::connect(pushButton_4, &QPushButton::clicked,this, &Ui_MainWindow::on_pushButton_4_clicked);
-    QObject::connect(comboBox_5, static_cast<void(QComboBox::*)(int index)>(&QComboBox::currentIndexChanged),this, &Ui_MainWindow::on_comboBox_5_currentIndexChanged);
-    QObject::connect(pushButton_3,&QPushButton::clicked,this,&Ui_MainWindow::on_pushButton_3_clicked);
-    QObject::connect(serialController->_port, &QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
-    QObject::connect(pushButton_5,&QPushButton::clicked,this,&Ui_MainWindow::on_pushButton_5_clicked);
+    QObject::connect(pushButton_4, &QPushButton::clicked,this, &Ui_MainWindow::InitPort);
+    QObject::connect(comboBox_5, static_cast<void(QComboBox::*)(int index)>(&QComboBox::currentIndexChanged),this, &Ui_MainWindow::comboBox_5_currentIndexChanged);
+    QObject::connect(pushButton_3,&QPushButton::clicked,this,&Ui_MainWindow::SendCommand);
+    QObject::connect(pushButton_5,&QPushButton::clicked,this,&Ui_MainWindow::Single_Rx_Test);
+    QObject::connect(this,&Ui_MainWindow::OpenPort,serialPort,&SerialPort::ReadyOpenPort);
+    QObject::connect(this,&Ui_MainWindow::WritePort,serialPort,&SerialPort::ReadyWriteSlot);
+    QObject::connect(pushButton_6,&QPushButton::clicked,this,[=]
+    {
+        emit IsMultiple_Test(true);
+    });
+    QObject::connect(pushButton_8,&QPushButton::clicked,this,[=]
+    {
+        emit IsMultiple_Test(false);
+    });
+    QObject::connect(this,&Ui_MainWindow::IsMultiple_Test,this,&Ui_MainWindow::Multiple_Test);
+    QObject::connect(pushButton_2,&QPushButton::clicked,this,&Ui_MainWindow::ClearBrowser);
+    QObject::connect(serialPort,&SerialPort::PortNotOpen,this,&Ui_MainWindow::IsPortNotOpen);
+    QObject::connect(pushButton_12,&QPushButton::clicked,this,&Ui_MainWindow::ShowPort);
+    QObject::connect(pushButton,&QPushButton::clicked,serialPort,&SerialPort::ReadyClosePort);
+    QObject::connect(pushButton_9,&QPushButton::clicked,this,&Ui_MainWindow::Tx_Test);
 }
-void Ui_MainWindow::on_comboBox_5_currentIndexChanged(int i)
+
+void Ui_MainWindow::comboBox_5_currentIndexChanged(int i)
 {
     QString text = comboBox_5->currentText();
     if(text == "BL")
@@ -454,92 +488,60 @@ void Ui_MainWindow::on_comboBox_5_currentIndexChanged(int i)
     }
     comboBox_3->setCurrentIndex(0);
 }
-void Ui_MainWindow::on_pushButton_4_clicked()
+
+void Ui_MainWindow::InitPort()
 {
+    SerialPort_Init();
+}
 
-    timer = new QTimer();
-    if(serialController->_port->isOpen())
-    {
-        serialController->_port->clear();
-        serialController->_port->close();
-    }
-//        foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
-//        {
-//            if(info.portName() == comboBox->currentText())
-//            {
-//                serial->setPort(info);
-//            }
-//        }
-
-//比较鸡肋的功能：打开串口之后，设置combobox不可选
-//        comboBox->setEnabled(false);
-//        comboBox_2->setEnabled(false);
-    serialController->_port->setPortName(comboBox->currentText());
+void Ui_MainWindow::SerialPort_Init()
+{
+    qDebug()<<"SerialPort_Init:"<<QThread::currentThreadId();
+    serialPort->_port->setPortName(comboBox->currentText());
     switch (comboBox_2->currentText().toInt())
     {
         case 1200:
-            serialController->_port->setBaudRate(QSerialPort::Baud1200);
+            serialPort->_port->setBaudRate(QSerialPort::Baud1200);
             break;
         case 2400:
-            serialController->_port->setBaudRate(QSerialPort::Baud2400);
+            serialPort->_port->setBaudRate(QSerialPort::Baud2400);
             break;
         case 4800:
-            serialController->_port->setBaudRate(QSerialPort::Baud4800);
+            serialPort->_port->setBaudRate(QSerialPort::Baud4800);
             break;
         case 9600:
-            serialController->_port->setBaudRate(QSerialPort::Baud9600);
+            serialPort->_port->setBaudRate(QSerialPort::Baud9600);
             break;
         case 19200:
-            serialController->_port->setBaudRate(QSerialPort::Baud19200);
+            serialPort->_port->setBaudRate(QSerialPort::Baud19200);
             break;
         case 38400:
-            serialController->_port->setBaudRate(QSerialPort::Baud38400);
+            serialPort->_port->setBaudRate(QSerialPort::Baud38400);
             break;
         case 57600:
-            serialController->_port->setBaudRate(QSerialPort::Baud57600);
+            serialPort->_port->setBaudRate(QSerialPort::Baud57600);
             break;
         case 115200:
-            serialController->_port->setBaudRate(QSerialPort::Baud115200);
+            serialPort->_port->setBaudRate(QSerialPort::Baud115200);
             break;
     }
-    serialController->_port->setDataBits(QSerialPort::Data8);
-    serialController->_port->setParity(QSerialPort::NoParity);
-    serialController->_port->setFlowControl(QSerialPort::NoFlowControl);
-    serialController->_port->setStopBits(QSerialPort::OneStop);
-    if(serialController->_port->open(QIODevice::ReadWrite))
-    {
-        QObject::connect(serialController->_port,&QSerialPort::readyRead,this,[=]()
-        {
-            timer->start(1000);
-            buffer.append(serialController->_port->readAll());//将读到的数据放入缓冲区
-        });
-        QObject::connect(timer,&QTimer::timeout,this,&Ui_MainWindow::on_timer_timerout_readComData);
-//            QObject::connect(timer, SIGNAL(timeout()),this, SLOT(on_timer_timerout_readComData()));
-//            timer->start(1000);
-//            QObject::connect(serial,&QSerialPort::readyRead,this,&Ui_MainWindow::on_timer_timerout_readComData);
-    }
-    else
-    {
-        QMessageBox::about(NULL, "提示", "串口没有打开！");
-        serialController->_port->clear();
-        serialController->_port->close();
-        return;
-    }
+    serialPort->_port->setDataBits(QSerialPort::Data8);
+    serialPort->_port->setParity(QSerialPort::NoParity);
+    serialPort->_port->setFlowControl(QSerialPort::NoFlowControl);
+    serialPort->_port->setStopBits(QSerialPort::OneStop);
+    emit OpenPort();
 }
-void Ui_MainWindow::on_timer_timerout_readComData()
+
+void Ui_MainWindow::ShowData(QString msg)
 {
-    timer->stop();
-    if(!buffer.isEmpty())
-    {
-        auto text = this->textBrowser->toPlainText();
-        //text.append("["+time.currentTime().toString("hh:mm:ss.zzz")+"]"+"receive:");
-        text.append(buffer.data());
-        textBrowser->setText(text);
-        textBrowser->moveCursor(QTextCursor::End);
-    }
-    buffer.clear();
+    QString text = textEdit->toPlainText();
+    auto browser_text = this->textBrowser->toPlainText();
+    browser_text.append(msg);
+    textBrowser->setText(browser_text);
+    textBrowser->moveCursor(QTextCursor::End);
 }
-void Ui_MainWindow::on_pushButton_3_clicked()
+
+void Ui_MainWindow::SendCommand()
 {
     QString text = textEdit->toPlainText();
     auto browser_text = this->textBrowser->toPlainText();
@@ -547,20 +549,52 @@ void Ui_MainWindow::on_pushButton_3_clicked()
     textBrowser->setText(browser_text);
     textBrowser->moveCursor(QTextCursor::End);
     text = text.append("\r\n");
-    serialController->_port->write(text.toLocal8Bit());
+    emit WritePort(text);
+    //serialPort->_port->write(text.toLocal8Bit());
 
 }
-void Ui_MainWindow::on_pushButton_5_clicked()
+
+void Ui_MainWindow::Single_Rx_Test()
 {
     QString command("AT+PVTCMD=EVM,RXS,1,CH");
     command.append("\r\n");
-    serialController->_port->write(command.toLocal8Bit());
+    emit WritePort(command);
 
-//    command = "AT+PVTCMD=EVM,RXS,0,CH";
-//    command.append("\r\n");
-//    serialController->_port->write(command.toLocal8Bit());
-//
-//    command = "AT+PVTCMD=EVM,RXS,INFO";
-//    command.append("\r\n");
-//    serialController->_port->write(command.toLocal8Bit());
+    command = "AT+PVTCMD=EVM,RXS,0,CH";
+    command.append("\r\n");
+    emit WritePort(command);
+
+    command = "AT+PVTCMD=EVM,RXS,INFO";
+    command.append("\r\n");
+    emit WritePort(command);
+}
+
+void Ui_MainWindow::Multiple_Test(bool flag)
+{
+    for (int i = 0; i < 5; ++i) {
+        Single_Rx_Test();
+    }
+}
+
+void Ui_MainWindow::ClearBrowser()
+{
+    textBrowser->clear();
+}
+
+void Ui_MainWindow::IsPortNotOpen()
+{
+    //QMessageBox::about(NULL, "提示", "串口没有打开！");
+    QMessageBox::information(this,"提示","串口没有打开！");
+
+}
+
+void Ui_MainWindow::Tx_Test()
+{
+//    qDebug()<<comboBox_5->currentText();
+//    qDebug()<<comboBox_3->currentText();
+//    qDebug()<<comboBox_4->currentText();
+    QString command("AT+PVTCMD=EVM,TX,");
+    command.append(comboBox_5->currentText()+","+comboBox_3->currentText()+","+comboBox_4->currentText()+","+"1024");
+    command.append("\r\n");
+    emit WritePort(command);
 }

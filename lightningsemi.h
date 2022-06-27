@@ -21,22 +21,24 @@
 #include <QObject>
 #include <QDebug>
 #include <QTimer>
-#include <QMessageBox>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
-#include "serialcontroller.h"
+#include <QMutex>
+#include <QThread>
 
+class SerialPort;
+class PortWriteThread;
+class PortReadThread;
 QT_BEGIN_NAMESPACE
 
 class Ui_MainWindow : public QMainWindow
 {
-    QOBJECT_H
+Q_OBJECT
 public:
     explicit Ui_MainWindow(QWidget *parent = nullptr);
 public:
     QStringList QList;
     QTime time;
-    QByteArray buffer;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QSpacerItem *horizontalSpacer_12;
@@ -61,15 +63,9 @@ public:
     QComboBox *comboBox;
     QPushButton *pushButton;
     QComboBox *comboBox_2;
-    QLabel *label_9;
     QLabel *label_4;
     QLabel *label_2;
-    QComboBox *comboBox_7;
-    QComboBox *comboBox_8;
-    QLabel *label_8;
-    QLabel *label_7;
     QLabel *label_10;
-    QComboBox *comboBox_6;
     QPushButton *pushButton_12;
     QFrame *gridFrame_3;
     QGridLayout *gridLayout_5;
@@ -102,21 +98,17 @@ public:
     QWidget *tab_5;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
-    QPushButton *pushButton_7;
     QPushButton *pushButton_8;
     QGridLayout *gridLayout_3;
     QWidget *tab_6;
     QPushButton *pushButton_9;
-    QPushButton *pushButton_10;
-    QPushButton *pushButton_11;
     QLabel *label;
     QSpacerItem *horizontalSpacer_14;
     QSpacerItem *horizontalSpacer_11;
     QSpacerItem *verticalSpacer_3;
     QSpacerItem *horizontalSpacer;
     QTextBrowser *textBrowser;
-    QTimer *timer;
-    SerialController *serialController;
+    SerialPort *serialPort;
 
     void setupUi();
 
@@ -126,12 +118,39 @@ public:
 
     void createConnect();
 
+    void SerialPort_Init();
+
 public slots:
-    void on_comboBox_5_currentIndexChanged(int i);
-    void on_pushButton_4_clicked();
-    void on_timer_timerout_readComData();
-    void on_pushButton_3_clicked();
-    void on_pushButton_5_clicked();
+    void comboBox_5_currentIndexChanged(int i);
+
+    void InitPort();
+
+    void SendCommand();
+
+    void Single_Rx_Test();
+
+    void Multiple_Test(bool flag);
+
+    void ShowData(QString msg);
+
+    void ClearBrowser();
+
+    void IsPortNotOpen();
+
+    void Tx_Test();
+
+signals:
+    void OpenPort();
+
+    void WritePort(QString msg);
+
+    void IsMultiple_Test(bool flag);
+
+private:
+    QMutex _mux;
+
+    PortWriteThread* writeObj;
+    PortReadThread* readObj;
 };
 
 namespace Ui {

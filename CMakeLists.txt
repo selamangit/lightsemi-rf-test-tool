@@ -18,7 +18,7 @@ find_package(Qt5 COMPONENTS
         REQUIRED
         SerialPort)
 
-add_executable(lightsemi main.cpp lightningsemi.h lightningsemi.cpp serialcontroller.cpp serialcontroller.h PortReadThread.cpp PortReadThread.h PortWriteThread.cpp PortWriteThread.h SerialPort.cpp SerialPort.h)
+add_executable(lightsemi main.cpp lightningsemi.h lightningsemi.cpp PortReadThread.cpp PortReadThread.h PortWriteThread.cpp PortWriteThread.h SerialPort.cpp SerialPort.h)
 target_link_libraries(lightsemi
         Qt5::Core
         Qt5::Gui
