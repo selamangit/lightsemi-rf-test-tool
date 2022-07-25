@@ -1,0 +1,199 @@
+{
+	"BUILD_DIR" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen",
+	"CMAKE_BINARY_DIR" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Project/QtProject/lightsemi-rf-test-tool",
+	"CMAKE_EXECUTABLE" : "D:/Clion/CLion 2021.2.2/bin/cmake/win/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"D:/Project/QtProject/lightsemi-rf-test-tool/CMakeLists.txt",
+		"D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/3.20.2/CMakeSystem.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake",
+		"D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/3.20.2/CMakeCCompiler.cmake",
+		"D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeGenericSystem.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/WindowsPaths.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeFindCodeBlocks.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/ProcessorCount.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeCInformation.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Compiler/GNU-C.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Compiler/GNU.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-GNU-C.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-GNU.cmake",
+		"D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/3.20.2/CMakeRCCompiler.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeRCInformation.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-windres.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-GNU-C-ABI.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeCXXInformation.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Compiler/GNU-CXX.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Compiler/GNU.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-GNU-CXX.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-GNU.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeParseArguments.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeParseArguments.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "D:/Project/QtProject/lightsemi-rf-test-tool",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/include/PortReadThread.h",
+			"MU",
+			"6YEA5652QU/moc_PortReadThread.cpp",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/include/PortWriteThread.h",
+			"MU",
+			"6YEA5652QU/moc_PortWriteThread.cpp",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/include/SerialPort.h",
+			"MU",
+			"6YEA5652QU/moc_SerialPort.cpp",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/include/lightningsemi.h",
+			"MU",
+			"6YEA5652QU/moc_lightningsemi.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen/include",
+	"MOC_COMPILATION_FILE" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_SERIALPORT_LIB",
+		"QT_WIDGETS_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"D:/Project/QtProject/lightsemi-rf-test-tool/include",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/include",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtGui",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtANGLE",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets",
+		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtSerialPort",
+		"D:/QT/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++",
+		"D:/QT/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32",
+		"D:/QT/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward",
+		"D:/QT/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include",
+		"D:/QT/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed",
+		"D:/QT/Qt5.14.2/Tools/mingw730_64/x86_64-w64-mingw32/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"D:/QT/Qt5.14.2/Tools/mingw730_64/bin/g++.exe",
+		"-dM",
+		"-E",
+		"-c",
+		"D:/Clion/CLion 2021.2.2/bin/cmake/win/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/lightsemi_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "D:/QT/Qt5.14.2/5.14.2/mingw73_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "D:/QT/Qt5.14.2/5.14.2/mingw73_64/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 14,
+	"SETTINGS_FILE" : "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-release/CMakeFiles/lightsemi_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/PortReadThread.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/PortWriteThread.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/SerialPort.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/lightningsemi.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/main.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

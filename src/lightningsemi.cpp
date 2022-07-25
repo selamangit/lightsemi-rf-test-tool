@@ -10,7 +10,7 @@ Ui_MainWindow::Ui_MainWindow(QWidget *parent): QMainWindow(parent)
     setupUi();
     serialPort = new SerialPort();
 
-    qDebug()<<"Main:"<<QThread::currentThreadId();
+//    qDebug()<<"Main:"<<QThread::currentThreadId();
     QThread *portThread = new QThread();
     serialPort->moveToThread(portThread);
     this->connect(serialPort,&SerialPort::ThreadStop,portThread,&QThread::quit);
@@ -405,7 +405,7 @@ void Ui_MainWindow::retranslateUi()
     label_7->setText(QCoreApplication::translate("MainWindow", "wifi\346\265\213\350\257\225", nullptr));
     pushButton_7->setText(QCoreApplication::translate("MainWindow", "RX\346\265\213\350\257\225", nullptr));
     pushButton_10->setText(QCoreApplication::translate("MainWindow", "TX\346\265\213\350\257\225", nullptr));
-    menuabout->setTitle(QCoreApplication::translate("MainWindow", "about", nullptr));
+    menuabout->setTitle(QCoreApplication::translate("MainWindow", "帮助", nullptr));
 } // retranslateUi
 
 void Ui_MainWindow::ShowPort()
@@ -490,7 +490,6 @@ void Ui_MainWindow::InitPort()
 
 void Ui_MainWindow::SerialPort_Init()
 {
-    qDebug()<<"SerialPort_Init:"<<QThread::currentThreadId();
     serialPort->_port->setPortName(comboBox->currentText());
     switch (comboBox_2->currentText().toInt())
     {
@@ -530,7 +529,6 @@ void Ui_MainWindow::ShowData(QByteArray msg)
 {
     if(mode == 2)
     {
-        qDebug()<<"mode = 2";
         QString text = textEdit->toPlainText();
         auto browser_text = this->textBrowser->toPlainText();
         browser_text.append(msg.toHex() + "\n");
@@ -539,7 +537,6 @@ void Ui_MainWindow::ShowData(QByteArray msg)
     }
     else if(mode == 1)
     {
-        qDebug()<<"mode = 1";
         QString text = textEdit->toPlainText();
         auto browser_text = this->textBrowser->toPlainText();
         browser_text.append(msg);

@@ -14,9 +14,6 @@ set(CMAKE_PREFIX_PATH "D:/QT/Qt5.14.2/5.14.2/mingw73_64")
 aux_source_directory(src/ SRC_FILES)
 file(GLOB FILES RELATIVE ${PROJECT_SOURCE_DIR} include/*.h)
 
-
-
-
 find_package(Qt5 COMPONENTS
         Core
         Gui

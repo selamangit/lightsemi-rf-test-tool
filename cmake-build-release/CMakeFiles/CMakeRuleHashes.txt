@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+43af9e33ed453114715aa46171dad3d1 CMakeFiles/lightsemi_autogen
