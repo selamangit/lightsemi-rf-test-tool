@@ -6,23 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.h
-QObject
--
-QTimer
--
-QMutex
--
-
-D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.h
-QObject
--
-QTimer
--
-QMutex
--
-
-D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.h
+../include/SerialPort.h
 QObject
 -
 QtSerialPort/QSerialPort
@@ -36,24 +20,12 @@ QtCore/QList
 QMutex
 -
 
-D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp
-QThread
--
-QMessageBox
--
-lightningsemi.h
-D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.h
-SerialPort.h
-D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.h
-PortWriteThread.h
-D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.h
-PortReadThread.h
-D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.h
-
-D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.h
+../include/lightningsemi.h
 QtCore/QVariant
 -
 QtCore/QTime
+-
+QtGui/QIcon
 -
 QtWidgets/QApplication
 -
@@ -81,6 +53,10 @@ QtWidgets/QVBoxLayout
 -
 QtWidgets/QWidget
 -
+QtWidgets/QStatusBar
+-
+QtWidgets/QMenuBar
+-
 QtCore/QList
 -
 QStringList
@@ -99,6 +75,14 @@ QMutex
 -
 QThread
 -
+
+D:/Project/QtProject/lightsemi-rf-test-tool/src/lightningsemi.cpp
+QThread
+-
+lightningsemi.h
+D:/Project/QtProject/lightsemi-rf-test-tool/src/lightningsemi.h
+SerialPort.h
+D:/Project/QtProject/lightsemi-rf-test-tool/src/SerialPort.h
 
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QByteArray
 qbytearray.h
@@ -936,6 +920,10 @@ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qversiontagging.h
 QtCore/qglobal.h
 -
 
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtGui/QIcon
+qicon.h
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtGui/qicon.h
+
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtGui/qbrush.h
 QtGui/qtguiglobal.h
 -
@@ -1392,9 +1380,9 @@ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QMainWindow
 qmainwindow.h
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmainwindow.h
 
-D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QMessageBox
-qmessagebox.h
-D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmessagebox.h
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QMenuBar
+qmenubar.h
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmenubar.h
 
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QPushButton
 qpushbutton.h
@@ -1403,6 +1391,10 @@ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QSpacerItem
 qlayoutitem.h
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qlayoutitem.h
+
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QStatusBar
+qstatusbar.h
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qstatusbar.h
 
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QTabWidget
 qtabwidget.h
@@ -1462,6 +1454,28 @@ QtWidgets/qwidget.h
 QtGui/qvalidator.h
 -
 
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qaction.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtGui/qkeysequence.h
+-
+QtCore/qstring.h
+-
+QtWidgets/qwidget.h
+-
+QtCore/qvariant.h
+-
+QtGui/qicon.h
+-
+QtWidgets/qactiongroup.h
+-
+
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qactiongroup.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qaction.h
+-
+
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qapplication.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1505,12 +1519,6 @@ QtGui/qvalidator.h
 -
 
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-
-D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qdialog.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h
@@ -1576,10 +1584,22 @@ QtWidgets/qwidget.h
 QtWidgets/qtabwidget.h
 -
 
-D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmessagebox.h
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmenu.h
 QtWidgets/qtwidgetsglobal.h
 -
-QtWidgets/qdialog.h
+QtWidgets/qwidget.h
+-
+QtCore/qstring.h
+-
+QtGui/qicon.h
+-
+QtWidgets/qaction.h
+-
+
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qmenubar.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qmenu.h
 -
 
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qpushbutton.h
@@ -1606,6 +1626,12 @@ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qslider.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qabstractslider.h
+-
+
+D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qstatusbar.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
 -
 
 D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qstyle.h

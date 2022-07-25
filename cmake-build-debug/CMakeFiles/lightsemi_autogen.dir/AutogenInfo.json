@@ -82,27 +82,27 @@
 	"HEADERS" : 
 	[
 		[
-			"D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.h",
+			"D:/Project/QtProject/lightsemi-rf-test-tool/include/PortReadThread.h",
 			"MU",
-			"EWIEGA46WW/moc_PortReadThread.cpp",
+			"6YEA5652QU/moc_PortReadThread.cpp",
 			null
 		],
 		[
-			"D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.h",
+			"D:/Project/QtProject/lightsemi-rf-test-tool/include/PortWriteThread.h",
 			"MU",
-			"EWIEGA46WW/moc_PortWriteThread.cpp",
+			"6YEA5652QU/moc_PortWriteThread.cpp",
 			null
 		],
 		[
-			"D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.h",
+			"D:/Project/QtProject/lightsemi-rf-test-tool/include/SerialPort.h",
 			"MU",
-			"EWIEGA46WW/moc_SerialPort.cpp",
+			"6YEA5652QU/moc_SerialPort.cpp",
 			null
 		],
 		[
-			"D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.h",
+			"D:/Project/QtProject/lightsemi-rf-test-tool/include/lightningsemi.h",
 			"MU",
-			"EWIEGA46WW/moc_lightningsemi.cpp",
+			"6YEA5652QU/moc_lightningsemi.cpp",
 			null
 		]
 	],
@@ -119,6 +119,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"D:/Project/QtProject/lightsemi-rf-test-tool/include",
 		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/include",
 		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore",
 		"D:/QT/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++",
@@ -158,26 +159,30 @@
 	"SOURCES" : 
 	[
 		[
-			"D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.cpp",
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/PortReadThread.cpp",
 			"MU",
 			null
 		],
 		[
-			"D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.cpp",
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/PortWriteThread.cpp",
 			"MU",
 			null
 		],
 		[
-			"D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.cpp",
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/SerialPort.cpp",
 			"MU",
 			null
 		],
 		[
-			"D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp",
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/lightningsemi.cpp",
 			"MU",
 			null
 		],
-		[ "D:/Project/QtProject/lightsemi-rf-test-tool/main.cpp", "MU", null ]
+		[
+			"D:/Project/QtProject/lightsemi-rf-test-tool/src/main.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

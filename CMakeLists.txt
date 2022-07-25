@@ -11,14 +11,24 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_PREFIX_PATH "D:/QT/Qt5.14.2/5.14.2/mingw73_64")
 
+aux_source_directory(src/ SRC_FILES)
+file(GLOB FILES RELATIVE ${PROJECT_SOURCE_DIR} include/*.h)
+
+
+
+
 find_package(Qt5 COMPONENTS
         Core
         Gui
         Widgets
         REQUIRED
-        SerialPort)
-
-add_executable(lightsemi main.cpp lightningsemi.h lightningsemi.cpp PortReadThread.cpp PortReadThread.h PortWriteThread.cpp PortWriteThread.h SerialPort.cpp SerialPort.h)
+        SerialPort
+        )
+include_directories(include/)
+add_executable(lightsemi
+        ${SRC_FILES}
+        ${FILES}
+        )
 target_link_libraries(lightsemi
         Qt5::Core
         Qt5::Gui
@@ -44,7 +54,7 @@ if (WIN32)
                 "${QT_INSTALL_PATH}/plugins/platforms/qwindows${DEBUG_SUFFIX}.dll"
                 "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/platforms/")
     endif ()
-    foreach (QT_LIB Core Gui Widgets)
+    foreach (QT_LIB Core Gui Widgets SerialPort)
         add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E copy
                 "${QT_INSTALL_PATH}/bin/Qt5${QT_LIB}${DEBUG_SUFFIX}.dll"

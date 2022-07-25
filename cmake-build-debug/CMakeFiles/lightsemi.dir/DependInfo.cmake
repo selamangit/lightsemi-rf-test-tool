@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj"
-  "D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj"
-  "D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/SerialPort.cpp.obj"
-  "D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj"
   "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/lightsemi_autogen/mocs_compilation.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj"
-  "D:/Project/QtProject/lightsemi-rf-test-tool/main.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/main.cpp.obj"
+  "D:/Project/QtProject/lightsemi-rf-test-tool/src/PortReadThread.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.obj"
+  "D:/Project/QtProject/lightsemi-rf-test-tool/src/PortWriteThread.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj"
+  "D:/Project/QtProject/lightsemi-rf-test-tool/src/SerialPort.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/src/SerialPort.cpp.obj"
+  "D:/Project/QtProject/lightsemi-rf-test-tool/src/lightningsemi.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.obj"
+  "D:/Project/QtProject/lightsemi-rf-test-tool/src/main.cpp" "D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/CMakeFiles/lightsemi.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -28,6 +28,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "lightsemi_autogen/include"
+  "../include"
   "D:/QT/Qt5.14.2/5.14.2/mingw73_64/include"
   "D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore"
   "D:/QT/Qt5.14.2/5.14.2/mingw73_64/./mkspecs/win32-g++"

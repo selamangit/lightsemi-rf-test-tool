@@ -1,3 +1,0 @@
-"D:\Clion\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\lightsemi.dir/objects.a
-D:\QT\Qt5.14.2\Tools\mingw730_64\bin\ar.exe cr CMakeFiles\lightsemi.dir/objects.a @CMakeFiles\lightsemi.dir\objects1.rsp
-D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\lightsemi.dir/objects.a -Wl,--no-whole-archive -o lightsemi.exe -Wl,--out-implib,liblightsemi.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\lightsemi.dir\linklibs.rsp

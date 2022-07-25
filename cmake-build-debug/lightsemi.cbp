@@ -19,7 +19,7 @@
 			</Target>
 			<Target title="lightsemi">
 				<Option output="D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/lightsemi.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug"/>
+				<Option working_dir=""/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -29,6 +29,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_SERIALPORT_LIB"/>
 					<Add directory="D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/lightsemi_autogen/include"/>
+					<Add directory="D:/Project/QtProject/lightsemi-rf-test-tool/include"/>
 					<Add directory="D:/QT/Qt5.14.2/5.14.2/mingw73_64/include"/>
 					<Add directory="D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore"/>
 					<Add directory="D:/QT/Qt5.14.2/5.14.2/mingw73_64/./mkspecs/win32-g++"/>
@@ -52,7 +53,7 @@
 			</Target>
 			<Target title="lightsemi/fast">
 				<Option output="D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/lightsemi.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug"/>
+				<Option working_dir=""/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -62,6 +63,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_SERIALPORT_LIB"/>
 					<Add directory="D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/lightsemi_autogen/include"/>
+					<Add directory="D:/Project/QtProject/lightsemi-rf-test-tool/include"/>
 					<Add directory="D:/QT/Qt5.14.2/5.14.2/mingw73_64/include"/>
 					<Add directory="D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore"/>
 					<Add directory="D:/QT/Qt5.14.2/5.14.2/mingw73_64/./mkspecs/win32-g++"/>
@@ -114,34 +116,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.cpp">
-			<Option target="lightsemi"/>
-		</Unit>
-		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/PortReadThread.h">
-			<Option target="lightsemi"/>
-		</Unit>
-		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.cpp">
-			<Option target="lightsemi"/>
-		</Unit>
-		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/PortWriteThread.h">
-			<Option target="lightsemi"/>
-		</Unit>
-		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.cpp">
-			<Option target="lightsemi"/>
-		</Unit>
-		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/SerialPort.h">
-			<Option target="lightsemi"/>
-		</Unit>
 		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug/lightsemi_autogen/mocs_compilation.cpp">
 			<Option target="lightsemi"/>
 		</Unit>
-		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.cpp">
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/include/PortReadThread.h">
 			<Option target="lightsemi"/>
 		</Unit>
-		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/lightningsemi.h">
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/include/PortWriteThread.h">
 			<Option target="lightsemi"/>
 		</Unit>
-		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/main.cpp">
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/include/SerialPort.h">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/include/lightningsemi.h">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/src/PortReadThread.cpp">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/src/PortWriteThread.cpp">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/src/SerialPort.cpp">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/src/lightningsemi.cpp">
+			<Option target="lightsemi"/>
+		</Unit>
+		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/src/main.cpp">
 			<Option target="lightsemi"/>
 		</Unit>
 		<Unit filename="D:/Project/QtProject/lightsemi-rf-test-tool/CMakeLists.txt">

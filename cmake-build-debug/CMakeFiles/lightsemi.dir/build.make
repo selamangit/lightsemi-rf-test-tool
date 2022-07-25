@@ -79,94 +79,94 @@ CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.s"
 	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\lightsemi_autogen\mocs_compilation.cpp -o CMakeFiles\lightsemi.dir\lightsemi_autogen\mocs_compilation.cpp.s
 
-CMakeFiles/lightsemi.dir/main.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
-CMakeFiles/lightsemi.dir/main.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
-CMakeFiles/lightsemi.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lightsemi.dir/main.cpp.obj"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\main.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\main.cpp
+CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
+CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
+CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.obj: ../src/PortReadThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.obj"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\src\PortReadThread.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\src\PortReadThread.cpp
 
-CMakeFiles/lightsemi.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/main.cpp.i"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\main.cpp > CMakeFiles\lightsemi.dir\main.cpp.i
+CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.i"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\src\PortReadThread.cpp > CMakeFiles\lightsemi.dir\src\PortReadThread.cpp.i
 
-CMakeFiles/lightsemi.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/main.cpp.s"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\main.cpp -o CMakeFiles\lightsemi.dir\main.cpp.s
+CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.s"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\src\PortReadThread.cpp -o CMakeFiles\lightsemi.dir\src\PortReadThread.cpp.s
 
-CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
-CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
-CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj: ../lightningsemi.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\lightningsemi.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\lightningsemi.cpp
+CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
+CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
+CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj: ../src/PortWriteThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\src\PortWriteThread.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\src\PortWriteThread.cpp
 
-CMakeFiles/lightsemi.dir/lightningsemi.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/lightningsemi.cpp.i"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\lightningsemi.cpp > CMakeFiles\lightsemi.dir\lightningsemi.cpp.i
+CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.i"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\src\PortWriteThread.cpp > CMakeFiles\lightsemi.dir\src\PortWriteThread.cpp.i
 
-CMakeFiles/lightsemi.dir/lightningsemi.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/lightningsemi.cpp.s"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\lightningsemi.cpp -o CMakeFiles\lightsemi.dir\lightningsemi.cpp.s
+CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.s"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\src\PortWriteThread.cpp -o CMakeFiles\lightsemi.dir\src\PortWriteThread.cpp.s
 
-CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
-CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
-CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj: ../PortReadThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\PortReadThread.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\PortReadThread.cpp
+CMakeFiles/lightsemi.dir/src/SerialPort.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
+CMakeFiles/lightsemi.dir/src/SerialPort.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
+CMakeFiles/lightsemi.dir/src/SerialPort.cpp.obj: ../src/SerialPort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lightsemi.dir/src/SerialPort.cpp.obj"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\src\SerialPort.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\src\SerialPort.cpp
 
-CMakeFiles/lightsemi.dir/PortReadThread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/PortReadThread.cpp.i"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\PortReadThread.cpp > CMakeFiles\lightsemi.dir\PortReadThread.cpp.i
+CMakeFiles/lightsemi.dir/src/SerialPort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/src/SerialPort.cpp.i"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\src\SerialPort.cpp > CMakeFiles\lightsemi.dir\src\SerialPort.cpp.i
 
-CMakeFiles/lightsemi.dir/PortReadThread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/PortReadThread.cpp.s"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\PortReadThread.cpp -o CMakeFiles\lightsemi.dir\PortReadThread.cpp.s
+CMakeFiles/lightsemi.dir/src/SerialPort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/src/SerialPort.cpp.s"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\src\SerialPort.cpp -o CMakeFiles\lightsemi.dir\src\SerialPort.cpp.s
 
-CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
-CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
-CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj: ../PortWriteThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\PortWriteThread.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\PortWriteThread.cpp
+CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
+CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
+CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.obj: ../src/lightningsemi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.obj"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\src\lightningsemi.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\src\lightningsemi.cpp
 
-CMakeFiles/lightsemi.dir/PortWriteThread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/PortWriteThread.cpp.i"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\PortWriteThread.cpp > CMakeFiles\lightsemi.dir\PortWriteThread.cpp.i
+CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.i"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\src\lightningsemi.cpp > CMakeFiles\lightsemi.dir\src\lightningsemi.cpp.i
 
-CMakeFiles/lightsemi.dir/PortWriteThread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/PortWriteThread.cpp.s"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\PortWriteThread.cpp -o CMakeFiles\lightsemi.dir\PortWriteThread.cpp.s
+CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.s"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\src\lightningsemi.cpp -o CMakeFiles\lightsemi.dir\src\lightningsemi.cpp.s
 
-CMakeFiles/lightsemi.dir/SerialPort.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
-CMakeFiles/lightsemi.dir/SerialPort.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
-CMakeFiles/lightsemi.dir/SerialPort.cpp.obj: ../SerialPort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lightsemi.dir/SerialPort.cpp.obj"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\SerialPort.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\SerialPort.cpp
+CMakeFiles/lightsemi.dir/src/main.cpp.obj: CMakeFiles/lightsemi.dir/flags.make
+CMakeFiles/lightsemi.dir/src/main.cpp.obj: CMakeFiles/lightsemi.dir/includes_CXX.rsp
+CMakeFiles/lightsemi.dir/src/main.cpp.obj: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Project\QtProject\lightsemi-rf-test-tool\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lightsemi.dir/src/main.cpp.obj"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\lightsemi.dir\src\main.cpp.obj -c D:\Project\QtProject\lightsemi-rf-test-tool\src\main.cpp
 
-CMakeFiles/lightsemi.dir/SerialPort.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/SerialPort.cpp.i"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\SerialPort.cpp > CMakeFiles\lightsemi.dir\SerialPort.cpp.i
+CMakeFiles/lightsemi.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lightsemi.dir/src/main.cpp.i"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Project\QtProject\lightsemi-rf-test-tool\src\main.cpp > CMakeFiles\lightsemi.dir\src\main.cpp.i
 
-CMakeFiles/lightsemi.dir/SerialPort.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/SerialPort.cpp.s"
-	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\SerialPort.cpp -o CMakeFiles\lightsemi.dir\SerialPort.cpp.s
+CMakeFiles/lightsemi.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lightsemi.dir/src/main.cpp.s"
+	D:\QT\Qt5.14.2\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Project\QtProject\lightsemi-rf-test-tool\src\main.cpp -o CMakeFiles\lightsemi.dir\src\main.cpp.s
 
 # Object files for target lightsemi
 lightsemi_OBJECTS = \
 "CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj" \
-"CMakeFiles/lightsemi.dir/main.cpp.obj" \
-"CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj" \
-"CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj" \
-"CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj" \
-"CMakeFiles/lightsemi.dir/SerialPort.cpp.obj"
+"CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.obj" \
+"CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj" \
+"CMakeFiles/lightsemi.dir/src/SerialPort.cpp.obj" \
+"CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.obj" \
+"CMakeFiles/lightsemi.dir/src/main.cpp.obj"
 
 # External object files for target lightsemi
 lightsemi_EXTERNAL_OBJECTS =
 
 lightsemi.exe: CMakeFiles/lightsemi.dir/lightsemi_autogen/mocs_compilation.cpp.obj
-lightsemi.exe: CMakeFiles/lightsemi.dir/main.cpp.obj
-lightsemi.exe: CMakeFiles/lightsemi.dir/lightningsemi.cpp.obj
-lightsemi.exe: CMakeFiles/lightsemi.dir/PortReadThread.cpp.obj
-lightsemi.exe: CMakeFiles/lightsemi.dir/PortWriteThread.cpp.obj
-lightsemi.exe: CMakeFiles/lightsemi.dir/SerialPort.cpp.obj
+lightsemi.exe: CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.obj
+lightsemi.exe: CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj
+lightsemi.exe: CMakeFiles/lightsemi.dir/src/SerialPort.cpp.obj
+lightsemi.exe: CMakeFiles/lightsemi.dir/src/lightningsemi.cpp.obj
+lightsemi.exe: CMakeFiles/lightsemi.dir/src/main.cpp.obj
 lightsemi.exe: CMakeFiles/lightsemi.dir/build.make
 lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Widgets.a
 lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5SerialPort.a
@@ -182,6 +182,7 @@ lightsemi.exe: CMakeFiles/lightsemi.dir/link.txt
 	"D:\Clion\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E copy D:/QT/Qt5.14.2/5.14.2/mingw73_64/bin/Qt5Core.dll D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug
 	"D:\Clion\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E copy D:/QT/Qt5.14.2/5.14.2/mingw73_64/bin/Qt5Gui.dll D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug
 	"D:\Clion\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E copy D:/QT/Qt5.14.2/5.14.2/mingw73_64/bin/Qt5Widgets.dll D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug
+	"D:\Clion\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E copy D:/QT/Qt5.14.2/5.14.2/mingw73_64/bin/Qt5SerialPort.dll D:/Project/QtProject/lightsemi-rf-test-tool/cmake-build-debug
 
 # Rule to build all files generated by this target.
 CMakeFiles/lightsemi.dir/build: lightsemi.exe
