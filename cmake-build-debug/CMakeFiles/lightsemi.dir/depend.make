@@ -259,8 +259,11 @@ CMakeFiles/lightsemi.dir/src/PortReadThread.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qvector.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qversiontagging.h
 CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj: \
+ ../include/PortWriteThread.h \
  ../src/PortWriteThread.cpp \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QDebug \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QMutex \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QObject \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QTimer \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qalgorithms.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qarraydata.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qatomic.h \
@@ -268,6 +271,7 @@ CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qatomic_cxx11.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qatomic_msvc.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasicatomic.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasictimer.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbytearray.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbytearraylist.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qchar.h \
@@ -276,21 +280,15 @@ CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qconfig.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qcontainerfwd.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qcontainertools_impl.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qcontiguouscache.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qcoreevent.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qdebug.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qflags.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qgenericatomic.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qglobal.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qglobalstatic.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qhash.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qhashfunctions.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qiodevice.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qiterator.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qlist.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qlocale.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qlogging.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qmap.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qmetatype.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qmutex.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qnamespace.h \
@@ -305,10 +303,6 @@ CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qrefcount.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qregexp.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qscopedpointer.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qset.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qshareddata.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qsharedpointer.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qsharedpointer_impl.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qstring.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qstringalgorithms.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qstringbuilder.h \
@@ -319,9 +313,8 @@ CMakeFiles/lightsemi.dir/src/PortWriteThread.cpp.obj: \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qsysinfo.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qsystemdetection.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtcore-config.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtextstream.h \
+ D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtimer.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtypeinfo.h \
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qvariant.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qvarlengtharray.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qvector.h \
  D:/QT/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qversiontagging.h

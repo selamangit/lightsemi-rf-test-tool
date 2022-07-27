@@ -11,7 +11,6 @@ SerialPort::~SerialPort()
 }
 void SerialPort::Run()
 {
-//    qDebug()<<"Run:"<<QThread::currentThreadId();
     _port = new QSerialPort();
     this->connect(_port,&QSerialPort::readyRead, this, &SerialPort::ReadyReadSlot);
 }

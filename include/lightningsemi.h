@@ -28,7 +28,7 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include <QMutex>
 #include <QThread>
-
+#include <QMessageBox>
 
 class SerialPort;
 class PortWriteThread;
@@ -85,12 +85,12 @@ public:
     QSpacerItem *horizontalSpacer_10;
     QFrame *line_4;
     QFrame *line;
+    QFrame *line_5;
     QSpacerItem *verticalSpacer_18;
     QSpacerItem *horizontalSpacer_13;
     QSpacerItem *horizontalSpacer_9;
     QFrame *line_3;
     QSpacerItem *horizontalSpacer_2;
-//    QFrame *gridFrame1;
     QGridLayout *gridLayout_6;
     QFrame *gridFrame_2;
     QGridLayout *gridLayout_7;
@@ -100,17 +100,15 @@ public:
     QComboBox *comboBox_3;
     QLabel *label_5;
     QLabel *label_6;
-//    QTabWidget *tabWidget;
-//    QGridLayout *gridLayout_8;
-//    QWidget *tab_5;
+
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
     QPushButton *pushButton_8;
-//    QGridLayout *gridLayout_3;
-//    QWidget *tab_6;
     QPushButton *pushButton_9;
     QPushButton *pushButton_7;
     QPushButton *pushButton_10;
+    QPushButton *pushButton_11;
+    QPushButton *pushButton_13;
     QLabel *label_7;
     QLabel *label;
     QSpacerItem *horizontalSpacer_14;
@@ -120,6 +118,10 @@ public:
     SerialPort *serialPort;
     QFrame *gridFrame_4;
     QAction *actiond;
+
+    QThread *portThread;
+
+    QByteArray *cmdbytes;
 
     int mode = 0;
 
@@ -142,7 +144,11 @@ public slots:
 
     void Single_Rx_Test();
 
-    void Multiple_Test(bool flag);
+    void Read_Rx_Info();
+
+    void Multiple_Test();
+
+    void Stop_Multiple_Test();
 
     void ShowData(QByteArray msg);
 
@@ -161,11 +167,8 @@ public slots:
 signals:
     void OpenPort();
 
-//    void WritePort(QString msg);
-
     void WritePort(QByteArray msg);
 
-    void IsMultiple_Test(bool flag);
 
 private:
     QMutex _mux;
