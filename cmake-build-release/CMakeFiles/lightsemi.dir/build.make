@@ -172,6 +172,7 @@ lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Widgets.a
 lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5SerialPort.a
 lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Gui.a
 lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Core.a
+lightsemi.exe: D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libqtmain.a
 lightsemi.exe: CMakeFiles/lightsemi.dir/linklibs.rsp
 lightsemi.exe: CMakeFiles/lightsemi.dir/objects1.rsp
 lightsemi.exe: CMakeFiles/lightsemi.dir/link.txt

@@ -24,7 +24,7 @@ find_package(Qt5 COMPONENTS
 include_directories(include/)
 add_executable(lightsemi
 
-#        WIN32
+        WIN32
         # 用于发行版时取消掉调试窗口
         ${SRC_FILES}
         ${FILES}
