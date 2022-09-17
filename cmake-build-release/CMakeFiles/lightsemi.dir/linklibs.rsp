@@ -1,1 +1,0 @@
- D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Widgets.a D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5SerialPort.a D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Gui.a D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Core.a D:/QT/Qt5.14.2/5.14.2/mingw73_64/lib/libqtmain.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
