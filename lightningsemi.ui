@@ -15,10 +15,297 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>data/logo008.png</normaloff>data/logo008.png</iconset>
+    <normaloff>lightsemi-rf-test-tool/lightsemi-rf-test-tool/data/logo008.png</normaloff>lightsemi-rf-test-tool/lightsemi-rf-test-tool/data/logo008.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
+    <item row="15" column="10" rowspan="6">
+     <spacer name="verticalSpacer_12">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>150</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="10" column="0" colspan="2">
+     <widget class="QFrame" name="gridFrame_3">
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
+         </property>
+         <property name="text">
+          <string>信道</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="comboBox_6"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="text">
+          <string>RX测试</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_10">
+         <property name="text">
+          <string>TX测试</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButton_13">
+         <property name="text">
+          <string>RX测试结束</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="pushButton_14">
+         <property name="text">
+          <string>TX测试结束</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="27" column="3">
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="23" column="3" colspan="5">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0" colspan="2">
+     <widget class="Line" name="line_5">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="10" rowspan="3">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="10" rowspan="3">
+     <spacer name="verticalSpacer_7">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="11" column="0" colspan="2">
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="10">
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="25" column="10">
+     <spacer name="verticalSpacer_18">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="27" column="5">
+     <spacer name="horizontalSpacer_13">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="7" column="0" colspan="2">
+     <widget class="QFrame" name="gridFrame_2">
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBox_3"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="text">
+          <string>连续RX测试</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
+         </property>
+         <property name="text">
+          <string>速率</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="comboBox_5"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="text">
+          <string>停止RX测试</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="pushButton_11">
+         <property name="text">
+          <string>读取RX数据</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboBox_4"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
+         </property>
+         <property name="text">
+          <string>模式</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton_9">
+         <property name="text">
+          <string>TX测试</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string>单次RX测试</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
+         </property>
+         <property name="text">
+          <string>信道</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Consolas&quot;;</string>
+      </property>
+      <property name="text">
+       <string>串口设置</string>
+      </property>
+     </widget>
+    </item>
+    <item row="27" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="27" column="4">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
     <item row="2" column="0" rowspan="3" colspan="2">
      <widget class="QFrame" name="gridFrame_4">
       <layout class="QGridLayout" name="gridLayout_2">
@@ -84,134 +371,7 @@
       </layout>
      </widget>
     </item>
-    <item row="7" column="0" rowspan="3" colspan="2">
-     <widget class="QFrame" name="gridFrame">
-      <property name="minimumSize">
-       <size>
-        <width>287</width>
-        <height>0</height>
-       </size>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_6">
-       <item row="2" column="1">
-        <widget class="QPushButton" name="pushButton_8">
-         <property name="text">
-          <string>停止RX测试</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="3">
-        <widget class="QPushButton" name="pushButton_9">
-         <property name="text">
-          <string>TX测试(11B)</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QPushButton" name="pushButton_6">
-         <property name="text">
-          <string>连续RX测试</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0" colspan="3">
-        <widget class="QFrame" name="gridFrame_2">
-         <layout class="QGridLayout" name="gridLayout_7">
-          <item row="2" column="1">
-           <widget class="QComboBox" name="comboBox_4"/>
-          </item>
-          <item row="1" column="1">
-           <widget class="QComboBox" name="comboBox_3"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_5">
-            <property name="styleSheet">
-             <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
-            </property>
-            <property name="text">
-             <string>速率</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_6">
-            <property name="styleSheet">
-             <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
-            </property>
-            <property name="text">
-             <string>信道</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_3">
-            <property name="styleSheet">
-             <string notr="true">font: 12pt &quot;Consolas&quot;;</string>
-            </property>
-            <property name="text">
-             <string>模式</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="comboBox_5"/>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="text">
-          <string>单次RX测试</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="21" column="3">
-     <spacer name="horizontalSpacer_4">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="11" column="0">
-     <widget class="QLabel" name="label_11">
-      <property name="text">
-       <string>蓝牙测试</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="10">
-     <spacer name="verticalSpacer_7">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="2" column="10">
+    <item row="1" column="10" rowspan="2">
      <spacer name="verticalSpacer">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -224,59 +384,7 @@
       </property>
      </spacer>
     </item>
-    <item row="17" column="10" rowspan="2">
-     <spacer name="verticalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="21" column="7">
-     <spacer name="horizontalSpacer_9">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="9" column="10" rowspan="8">
-     <spacer name="verticalSpacer_12">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>150</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="0" column="5">
-     <widget class="QLabel" name="label">
-      <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;Consolas&quot;;</string>
-      </property>
-      <property name="text">
-       <string>串口信息</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="18" column="7" rowspan="2">
+    <item row="24" column="7" rowspan="2">
      <widget class="QFrame" name="verticalFrame">
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
@@ -302,15 +410,8 @@
       </layout>
      </widget>
     </item>
-    <item row="5" column="0" colspan="2">
-     <widget class="Line" name="line_2">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="21" column="4">
-     <spacer name="horizontalSpacer_2">
+    <item row="27" column="7">
+     <spacer name="horizontalSpacer_9">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -322,38 +423,28 @@
       </property>
      </spacer>
     </item>
-    <item row="2" column="2" rowspan="18">
-     <widget class="Line" name="line_4">
+    <item row="27" column="6">
+     <spacer name="horizontalSpacer_14">
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Consolas&quot;;</string>
+      </property>
+      <property name="text">
+       <string>wifi测试</string>
       </property>
      </widget>
-    </item>
-    <item row="3" column="10">
-     <spacer name="verticalSpacer_3">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="19" column="10">
-     <spacer name="verticalSpacer_18">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
     </item>
     <item row="4" column="10" rowspan="2">
      <spacer name="verticalSpacer_4">
@@ -368,20 +459,7 @@
       </property>
      </spacer>
     </item>
-    <item row="21" column="5">
-     <spacer name="horizontalSpacer_13">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="21" column="1">
+    <item row="27" column="1">
      <spacer name="horizontalSpacer_10">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -394,27 +472,17 @@
       </property>
      </spacer>
     </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_10">
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Consolas&quot;;</string>
+      </property>
       <property name="text">
-       <string>串口设置</string>
+       <string>蓝牙测试</string>
       </property>
      </widget>
     </item>
-    <item row="8" column="10">
-     <spacer name="verticalSpacer_11">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>150</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="18" column="3" rowspan="2" colspan="4">
+    <item row="24" column="3" rowspan="2" colspan="4">
      <widget class="QWidget" name="gridWidget" native="true">
       <layout class="QGridLayout" name="gridLayout_4">
        <property name="leftMargin">
@@ -445,74 +513,47 @@
       </layout>
      </widget>
     </item>
-    <item row="17" column="3" colspan="5">
-     <widget class="Line" name="line">
+    <item row="5" column="0" colspan="2">
+     <widget class="Line" name="line_2">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>
-    <item row="21" column="6">
-     <spacer name="horizontalSpacer_14">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+    <item row="0" column="5">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">font: 15pt &quot;Consolas&quot;;</string>
       </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="10" column="0" colspan="2">
-     <widget class="Line" name="line_3">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="label_7">
       <property name="text">
-       <string>wifi测试</string>
+       <string>串口信息</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </item>
-    <item row="21" column="0">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="2" column="3" rowspan="15" colspan="5">
+    <item row="1" column="3" rowspan="22" colspan="5">
      <widget class="QTextBrowser" name="textBrowser"/>
     </item>
-    <item row="13" column="0" colspan="2">
-     <widget class="QFrame" name="gridFrame_3">
-      <layout class="QGridLayout" name="gridLayout_5">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton_7">
-         <property name="text">
-          <string>RX测试</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="pushButton_10">
-         <property name="text">
-          <string>TX测试</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+    <item row="9" column="10" rowspan="6">
+     <spacer name="verticalSpacer_11">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>150</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="2" rowspan="25">
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
      </widget>
     </item>
    </layout>
@@ -528,10 +569,8 @@
    </property>
    <widget class="QMenu" name="menuabout">
     <property name="title">
-     <string>about</string>
+     <string>帮助</string>
     </property>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
    </widget>
    <addaction name="menuabout"/>
   </widget>

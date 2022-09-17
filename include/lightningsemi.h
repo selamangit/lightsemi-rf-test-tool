@@ -71,6 +71,7 @@ public:
     QFrame *gridFrame;
     QGridLayout *gridLayout_2;
     QPushButton *pushButton_4;
+    QPushButton *pushButton_14;
     QComboBox *comboBox;
     QPushButton *pushButton;
     QComboBox *comboBox_2;
@@ -95,11 +96,13 @@ public:
     QFrame *gridFrame_2;
     QGridLayout *gridLayout_7;
     QComboBox *comboBox_5;
+    QComboBox *comboBox_6;
     QLabel *label_3;
     QComboBox *comboBox_4;
     QComboBox *comboBox_3;
     QLabel *label_5;
     QLabel *label_6;
+    QLabel *label_8;
 
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
@@ -162,7 +165,11 @@ public slots:
 
     void Ble_Tx_Test();
 
+    void Stop_Ble_Tx_Test();
+
     void Ble_Rx_Test();
+
+    void Stop_Ble_Rx_Test();
 
 signals:
     void OpenPort();

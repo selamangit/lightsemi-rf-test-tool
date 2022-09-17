@@ -44,7 +44,7 @@ void Ui_MainWindow::setupUi()
 
     centralwidget = new QWidget(this);
     centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-    centralwidget->setMinimumSize(800,600);
+    centralwidget->setMinimumSize(800,700);
 
     gridLayout = new QGridLayout(centralwidget);
     gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
@@ -56,15 +56,43 @@ void Ui_MainWindow::setupUi()
     gridFrame_3->setObjectName(QString::fromUtf8("gridFrame_3"));
     gridLayout_5 = new QGridLayout(gridFrame_3);
     gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
+    label_8 = new QLabel(gridFrame_3);
+    label_8->setObjectName(QString::fromUtf8("label_8"));
+    label_8->setStyleSheet(QString::fromUtf8("font: 12pt \"Consolas\";"));
+    label_8->setAlignment(Qt::AlignCenter);
+
+    gridLayout_5->addWidget(label_8, 0, 0, 1, 1);
+
+    comboBox_6 = new QComboBox(gridFrame_3);
+    comboBox_6->setObjectName(QString::fromUtf8("comboBox_6"));
+    comboBox_6->addItem("None");
+    for(int i=1;i<=40;i++)
+    {
+        comboBox_6->addItem(QString::number(i-1));
+    }
+    comboBox_6->setCurrentIndex(0);
+
+    gridLayout_5->addWidget(comboBox_6, 0, 1, 1, 1);
+
     pushButton_7 = new QPushButton(gridFrame_3);
     pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
 
-    gridLayout_5->addWidget(pushButton_7, 0, 0, 1, 1);
+    gridLayout_5->addWidget(pushButton_7, 1, 0, 1, 1);
 
     pushButton_10 = new QPushButton(gridFrame_3);
     pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
 
-    gridLayout_5->addWidget(pushButton_10, 0, 1, 1, 1);
+    gridLayout_5->addWidget(pushButton_10, 1, 1, 1, 1);
+
+    pushButton_13 = new QPushButton(gridFrame_3);
+    pushButton_13->setObjectName(QString::fromUtf8("pushButton_13"));
+
+    gridLayout_5->addWidget(pushButton_13, 2, 0, 1, 1);
+
+    pushButton_14 = new QPushButton(gridFrame_3);
+    pushButton_14->setObjectName(QString::fromUtf8("pushButton_14"));
+
+    gridLayout_5->addWidget(pushButton_14, 2, 1, 1, 1);
 
 
     gridLayout->addWidget(gridFrame_3, 10, 0, 1, 2);
@@ -163,7 +191,7 @@ void Ui_MainWindow::setupUi()
     comboBox_4->addItem("None");
     for(int i=1;i<=14;i++)
     {
-        comboBox_4->addItem(QString::number(i));
+        comboBox_4->addItem(QString::number(i-1));
     }
     comboBox_4->setCurrentIndex(0);
 
@@ -281,13 +309,6 @@ void Ui_MainWindow::setupUi()
 
     gridLayout->addWidget(verticalFrame, 24, 7, 2, 1);
 
-    line_4 = new QFrame(centralwidget);
-    line_4->setObjectName(QString::fromUtf8("line_4"));
-    line_4->setFrameShape(QFrame::VLine);
-    line_4->setFrameShadow(QFrame::Sunken);
-
-    gridLayout->addWidget(line_4, 2, 2, 24, 1);
-
     horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
     gridLayout->addItem(horizontalSpacer_9, 27, 7, 1, 1);
@@ -358,6 +379,13 @@ void Ui_MainWindow::setupUi()
 
     gridLayout->addItem(verticalSpacer_11, 9, 10, 6, 1);
 
+    line_4 = new QFrame(centralwidget);
+    line_4->setObjectName(QString::fromUtf8("line_4"));
+    line_4->setFrameShape(QFrame::VLine);
+    line_4->setFrameShadow(QFrame::Sunken);
+
+    gridLayout->addWidget(line_4, 1, 2, 25, 1);
+
     this->setCentralWidget(centralwidget);
     menuBar = new QMenuBar(this);
     menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -378,17 +406,20 @@ void Ui_MainWindow::setupUi()
     menuBar->addAction(menuabout->menuAction());
 
     retranslateUi();
+    ShowPort();
 
     QMetaObject::connectSlotsByName(this);
-    ShowPort();
 }
 
 void Ui_MainWindow::retranslateUi()
 {
     this->setWindowTitle(QCoreApplication::translate("MainWindow", "测试工具v1.0", nullptr));
     actiond->setText(QCoreApplication::translate("MainWindow", "d ", nullptr));
+    label_8->setText(QCoreApplication::translate("MainWindow", "\344\277\241\351\201\223", nullptr));
     pushButton_7->setText(QCoreApplication::translate("MainWindow", "RX\346\265\213\350\257\225", nullptr));
     pushButton_10->setText(QCoreApplication::translate("MainWindow", "TX\346\265\213\350\257\225", nullptr));
+    pushButton_13->setText(QCoreApplication::translate("MainWindow", "RX\346\265\213\350\257\225\347\273\223\346\235\237", nullptr));
+    pushButton_14->setText(QCoreApplication::translate("MainWindow", "TX\346\265\213\350\257\225\347\273\223\346\235\237", nullptr));
     pushButton_6->setText(QCoreApplication::translate("MainWindow", "\350\277\236\347\273\255RX\346\265\213\350\257\225", nullptr));
     label_5->setText(QCoreApplication::translate("MainWindow", "\351\200\237\347\216\207", nullptr));
     pushButton_8->setText(QCoreApplication::translate("MainWindow", "\345\201\234\346\255\242RX\346\265\213\350\257\225", nullptr));
@@ -409,6 +440,7 @@ void Ui_MainWindow::retranslateUi()
     label_11->setText(QCoreApplication::translate("MainWindow", "\350\223\235\347\211\231\346\265\213\350\257\225", nullptr));
     label->setText(QCoreApplication::translate("MainWindow", "\344\270\262\345\217\243\344\277\241\346\201\257", nullptr));
     menuabout->setTitle(QCoreApplication::translate("MainWindow", "\345\270\256\345\212\251", nullptr));
+
 } // retranslateUi
 
 void Ui_MainWindow::ShowPort()
@@ -434,10 +466,7 @@ void Ui_MainWindow::createConnect()
     QObject::connect(pushButton_5,&QPushButton::clicked,this,&Ui_MainWindow::Single_Rx_Test);
     QObject::connect(this,&Ui_MainWindow::OpenPort,serialPort,&SerialPort::ReadyOpenPort);
     QObject::connect(this,&Ui_MainWindow::WritePort,serialPort,&SerialPort::ReadyWriteSlot);
-//    QObject::connect(pushButton_8,&QPushButton::clicked,this,[=]
-//    {
-//        emit IsMultiple_Test(false);
-//    });
+
     QObject::connect(pushButton_6,&QPushButton::clicked,this,&Ui_MainWindow::Multiple_Test);
     QObject::connect(pushButton_8,&QPushButton::clicked,this,&Ui_MainWindow::Stop_Multiple_Test);
     QObject::connect(pushButton_2,&QPushButton::clicked,this,&Ui_MainWindow::ClearBrowser);
@@ -452,6 +481,9 @@ void Ui_MainWindow::createConnect()
     QObject::connect(pushButton_10,&QPushButton::clicked,this,&Ui_MainWindow::Ble_Tx_Test);
     QObject::connect(pushButton_7,&QPushButton::clicked,this,&Ui_MainWindow::Ble_Rx_Test);
     QObject::connect(pushButton_11,&QPushButton::clicked,this,&Ui_MainWindow::Read_Rx_Info);
+
+    QObject::connect(pushButton_13,&QPushButton::clicked,this,&Ui_MainWindow::Stop_Ble_Rx_Test);
+    QObject::connect(pushButton_14,&QPushButton::clicked,this,&Ui_MainWindow::Stop_Ble_Tx_Test);
 }
 
 void Ui_MainWindow::comboBox_5_currentIndexChanged(int i)
@@ -659,26 +691,45 @@ void Ui_MainWindow::Tx_Test()
 
 void Ui_MainWindow::Ble_Tx_Test()
 {
-    mode = 2;
-    char bytes_arr_1[]={0x01,0x03,0x0c,0x00};
-    QByteArray byt_1;
-    QByteArray byt_2;
+    if(comboBox_6->currentText() != "None")
+    {
+        mode = 2;
+        char bytes_arr_1[]={0x01,0x03,0x0c,0x00};
+        QByteArray byt_1;
+        QByteArray byt_2;
+        byt_1.resize(sizeof(bytes_arr_1));
+        for(int i=0;i<sizeof(bytes_arr_1);++i)
+        {
+            byt_1[i]=(char)bytes_arr_1[i];
+        }
+        emit WritePort(byt_1);
+
+        char bytes_arr_2[]={0x01,0x1e,0x20,0x03,0x00,0x25,0x00};
+
+        int num = comboBox_6->currentText().toInt();
+        QString hex = QString::number(num,16);
+        char a;
+        a = hex.mid(0, 4).toInt(nullptr, 16);
+        bytes_arr_2[4] = a;
+
+        byt_2.resize(sizeof(bytes_arr_2));
+        for(int i=0;i<sizeof(bytes_arr_2);++i)
+        {
+            byt_2[i]=(char)bytes_arr_2[i];
+        }
+        qDebug()<<byt_2.toHex();
+        emit WritePort(byt_2);
+    }
+    else
+    {
+        QMessageBox::information(this,"提示","请配置好信道信息");
+        return ;
+    }
+}
+
+void Ui_MainWindow::Stop_Ble_Tx_Test()
+{
     QByteArray byt_3;
-    byt_1.resize(sizeof(bytes_arr_1));
-    for(int i=0;i<sizeof(bytes_arr_1);++i)
-    {
-        byt_1[i]=(char)bytes_arr_1[i];
-    }
-    emit WritePort(byt_1);
-
-    char bytes_arr_2[]={0x01,0x1e,0x20,0x03,0x00,0x25,0x00};
-    byt_2.resize(sizeof(bytes_arr_2));
-    for(int i=0;i<sizeof(bytes_arr_2);++i)
-    {
-        byt_2[i]=(char)bytes_arr_2[i];
-    }
-    emit WritePort(byt_2);
-
     char bytes_arr_3[]={0x01,0x1f,0x20,0x00};
     byt_3.resize(sizeof(bytes_arr_3));
     for(int i=0;i<sizeof(bytes_arr_3);++i)
@@ -690,25 +741,45 @@ void Ui_MainWindow::Ble_Tx_Test()
 
 void Ui_MainWindow::Ble_Rx_Test()
 {
-    char bytes_arr_1[]={0x01,0x03,0x0c,0x00};
-    QByteArray byt_1;
-    QByteArray byt_2;
+    if(comboBox_6->currentText() != "None")
+    {
+        mode = 2;
+        char bytes_arr_1[]={0x01,0x03,0x0c,0x00};
+        QByteArray byt_1;
+        QByteArray byt_2;
+
+        byt_1.resize(sizeof(bytes_arr_1));
+        for(int i=0;i<sizeof(bytes_arr_1);++i)
+        {
+            byt_1[i]=(char)bytes_arr_1[i];
+        }
+        emit WritePort(byt_1);
+
+        char bytes_arr_2[]={0x01,0x1d,0x20,0x01,0x00};
+
+        int num = comboBox_6->currentText().toInt();
+        QString hex = QString::number(num,16);
+        char a;
+        a = hex.mid(0, 4).toInt(nullptr, 16);
+        bytes_arr_2[4] = a;
+
+        byt_2.resize(sizeof(bytes_arr_2));
+        for(int i=0;i<sizeof(bytes_arr_2);++i)
+        {
+            byt_2[i]=(char)bytes_arr_2[i];
+        }
+        emit WritePort(byt_2);
+    }
+    else
+    {
+        QMessageBox::information(this,"提示","请配置好信道信息");
+        return ;
+    }
+}
+
+void Ui_MainWindow::Stop_Ble_Rx_Test()
+{
     QByteArray byt_3;
-    byt_1.resize(sizeof(bytes_arr_1));
-    for(int i=0;i<sizeof(bytes_arr_1);++i)
-    {
-        byt_1[i]=(char)bytes_arr_1[i];
-    }
-    emit WritePort(byt_1);
-
-    char bytes_arr_2[]={0x01,0x1d,0x20,0x01,0x00};
-    byt_2.resize(sizeof(bytes_arr_2));
-    for(int i=0;i<sizeof(bytes_arr_2);++i)
-    {
-        byt_2[i]=(char)bytes_arr_2[i];
-    }
-    emit WritePort(byt_2);
-
     char bytes_arr_3[]={0x01,0x1f,0x20,0x00};
     byt_3.resize(sizeof(bytes_arr_3));
     for(int i=0;i<sizeof(bytes_arr_3);++i)
